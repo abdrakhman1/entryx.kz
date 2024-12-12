@@ -1,0 +1,238 @@
+.header {
+    padding: 20px 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header__contacts {
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+    flex: 1;
+}
+.header__contact {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    align-items: end;
+}
+.tel {
+    font-size: 20px;
+    font-weight: 600;
+    color: #181f20;
+}
+.email {
+    color: #a7a7a7;
+}
+
+.butn.butn_reg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(35deg, #b5e210, #69a019);
+    border-radius: 8px;
+    z-index: -2;
+}
+button.butn.butn_reg:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: white;
+    border-radius: 6px;
+    z-index: -1;
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+} 
+ 
+.butn.butn_reg {
+    background: white;
+    position: relative;
+    color: #181f20;
+    z-index: 1;
+    font-weight: 400;
+}
+
+.navbar {
+    padding: 0;
+    background-color: white;
+    z-index: 99;
+}
+.navbar-light .navbar-toggler {
+    border: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-toggler.collapsed .navbar-toggler-icon {
+    background: url(../img/burger.svg) no-repeat;
+    background-size: contain;
+}
+.navbar-light .navbar-toggler-icon {
+    background: url(../img/close.svg);
+    background-size: contain;
+}
+
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #181f20;
+}
+.container-fluid.navbar-brand {
+    margin-right: 40px;
+}
+.container-fluid .navbar-brand {
+    margin-right: 30px;
+}
+/* -----------------------------молдальное окно----------------------- */
+.modal-content {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 40px;
+    width: 100%;
+}
+.form-modal {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+   
+}
+
+.form-modal .input.input-white input{
+    background-color: #ececec;
+}
+.form_text{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.butn_close{
+    position: absolute;
+    right: 0;
+    background: transparent;
+    border: none;
+    top: 0;
+    color: white;
+    width: 40px;
+    height: 40px;
+    transform: translate(100%, -100%);
+    background-repeat: none;
+    background-position: center center;
+    background-size: contain;
+    background-image: url(/img/icon/close.svg);
+}
+
+@media (max-width: 1400px) {
+    .nav-wrap {
+        gap: 20px;
+    }
+    .nav-wrap .navbar-nav {
+        text-wrap: nowrap;
+    }
+    .nav-wrap {
+        gap: 10px;
+    }
+    .header__contact {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1400px) {
+    .header__contact .tel {
+        font-size: 18px;
+    }
+}
+@media (max-width: 1200px) {
+    .header__contact {
+        display: none;
+    }
+
+    .nav-wrap.navbar-nav {
+        flex: 2;
+    }
+    .header__contacts {
+        flex: 1;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-wrap {
+        flex-direction: column;
+    }
+    .navbar-nav {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+    .header__contact {
+        display: flex;
+    }
+    .header__contacts {
+        gap: 15px;
+    }
+    .navbar-brand img {
+        max-width: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .butn_close {
+        transform: translate(-30%, 30%);
+        background-image: url(/img/icon/close-black.svg);
+    }
+
+}
+@media (max-width: 576px) {
+    .header {
+        padding: 15px 0;
+    }
+    .header__contact {
+        align-items: start;
+        display: flex;
+    }
+    .header__contacts {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .header__contacts .butn {
+        width: 100%;
+    }
+    .navbar-collapse .icon-mobile {
+        display: flex;
+        padding: 8px 0;
+    }
+    .nav-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100vh - 100px);
+        width: 100%;
+    }
+    .navbar-collapse .navbar-nav {
+        padding-top: 40px;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .header__contact {
+        display: flex;
+    }
+    .header__contacts .butn_header {
+        max-width: 100%;
+    }
+}

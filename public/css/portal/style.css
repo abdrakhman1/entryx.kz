@@ -1,0 +1,21 @@
+@import url("/css/reset.css");
+@import url("/css/jquery-ui.css");
+/* --------------- */
+@import url("/css/fonts.css");
+@import url("/css/portal/nav.css");
+body {
+    color: #181f20;
+    font-family: Cera Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 103.2%; /* 16.512px */
+    letter-spacing: 0.48px;
+}
+.main_container {
+    display: flex;
+}
+.content_container {
+    padding: 40px 60px;
+    margin: 0 auto;
+}

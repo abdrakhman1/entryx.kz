@@ -1,0 +1,104 @@
+.points_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
+.search_points-sale input {
+    border-radius: 10px;
+    background: #f7f7f7;
+    padding: 18px 28px;
+    border: none;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.search_points-sale {
+    display: flex;
+    gap: 10px;
+}
+.search_points-sale button {
+    border-radius: 10px;
+    min-width: 56px;
+    height: 56px;
+    background: linear-gradient(225deg, #b6e310 0%, #69a019 100%);
+}
+.search_points-sale button img {
+    max-width: 28px;
+}
+.points_container_map #map {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+#map > ymaps {
+    border-radius: 20px;
+    overflow: hidden;
+}
+.points-item {
+    gap: 15px;
+    padding: 35px 0;
+    border-bottom: 1px solid #ececec;
+}
+.points_butns {
+    display: none;
+}
+
+/* --------------------------------------------скролл---------------------------------------- */
+.nano {
+    max-width: 450px;
+    height: 650px;
+    position: relative;
+    margin-top: 10px;
+}
+.nano .content {
+    padding: 10px;
+}
+.nano .pane {
+}
+.nano .slider {
+    background: #111;
+}
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+    background: linear-gradient(180deg, #afdd10 0%, #6fa518 100%);
+    width: 5px;
+}
+
+/* -------------------------------------------- */
+
+@media (max-width: 768px) {
+    .nano {
+        max-width: 100%;
+        height: 650px;
+        margin-top: 20px;
+    }
+    .points_container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+@media (max-width: 576px) {
+    .points_container_map #map {
+        min-height: 400px;
+        min-width: 200px;
+    }
+    .points_butns {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 25px;
+        justify-content: space-between;
+    }
+    .butn_point {
+        padding: 13px 20px;
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid #e6e6e6;
+        background: #fff;
+    }
+    .butn_point:hover,
+    .butn_point:active,
+    .butn_point:focus {
+        background-color: #111;
+        color: white;
+        border: 1px solid #111;
+    }
+}

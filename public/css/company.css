@@ -1,0 +1,162 @@
+.company,
+.dl-form {
+    background-color: #f7f7f7;
+}
+.advantages {
+    padding-top: 40px;
+    margin: 0 auto;
+}
+.advantages .col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 175px;
+    min-width: 150px;
+    padding: 0;
+}
+.number {
+    font-size: 45px;
+    font-weight: 500;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(35deg, #b5e210, #69a019);
+}
+
+.company__advant {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 760px;
+    flex: 3;
+}
+.company__advant-card {
+    padding: 30px 40px;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    background: white;
+}
+
+.figcaption__company {
+    bottom: 60px;
+    right: 50px;
+}
+.figcaption__company--sm {
+    bottom: 100px;
+    left: 30px;
+    right: 0;
+}
+.figcaption__company--sm p {
+    max-width: 240px;
+    color: white;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.cards__figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    justify-content: space-between;
+}
+.cards__figure figure:nth-child(2n) {
+    margin-top: 80px;
+}
+.cards__figure figure:nth-child(2n) .figcaption__company--sm {
+    bottom: 30px;
+}
+.card__figure img {
+    filter: brightness(0.6);
+}
+.quality {
+    gap: 20px;
+}
+.quality h2 {
+    flex: 2;
+}
+
+.company__advant-card .number {
+    font-size: 20px;
+}
+
+@media (max-width: 1400px) {
+    .cards__figure figure:nth-child(2n) {
+        margin-top: 0px;
+    }
+    .figcaption__company--sm {
+        bottom: 30px;
+    }
+}
+@media (max-width: 1200px) {
+    .cards__figure {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 992px) {
+    .advantages {
+        gap: 20px;
+    }
+    .quality {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .figcaption__company {
+        bottom: 25px;
+        right: 25px;
+        max-width: 130px;
+    }
+    .quality {
+        flex-direction: column;
+    }
+}
+@media (max-width: 576px) {
+    .advantages {
+        gap: 10px;
+    }
+    .advantages p {
+        font-size: 15px;
+        line-height: 140%;
+    }
+    .advantages .number {
+        font-size: 40px;
+    }
+    .figcaption__company {
+        bottom: 16px;
+        right: 16px;
+        max-width: 80px;
+    }
+    .cards__figure {
+        grid-template-columns: 1fr;
+    }
+    .card__figure {
+        height: 300px;
+    }
+    .card__figure img {
+        object-fit: cover;
+        border-radius: 20px;
+        height: 100%;
+    }
+    .company__img {
+        object-fit: cover;
+        width: 100%;
+        height: 225px;
+        border-radius: 20px;
+    }
+    .company__advant-card {
+        padding: 24px;
+        gap: 25px;
+    }
+    .company__advant-card p {
+        line-height: 140%;
+        letter-spacing: 0.03em;
+    }
+    .figcaption__company--sm p {
+        line-height: 140%;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+    }
+}

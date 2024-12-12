@@ -1,0 +1,169 @@
+.lk {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: normal;
+    padding: 50px 0 50px 50px;
+}
+h3 {
+    font-size: 30px;
+}
+.lk__container {
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    min-height: 550px;
+    background: #f7f7f7;
+    width: 100%;
+    justify-content: space-between;
+}
+.lk__img {
+    min-width: 270px;
+    background: url(../img/lk-bg.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    flex: 2;
+    background-position: right bottom;
+    min-height: 250px;
+    border-radius: 20px;
+}
+.lk h3 {
+    max-width: 340px;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+.lk h3 span {
+    font-weight: 500;
+}
+.lk-text {
+    margin: 34px 0 57px;
+    max-width: 405px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 1.2;
+}
+.lk-btn {
+    align-items: center;
+    padding: 4px 4px 4px 28px;
+    background-color: #ffffff;
+    border-radius: 500px;
+    display: flex;
+    max-width: 265px;
+    justify-content: space-between;
+}
+.lk-btn img {
+    max-width: 48px;
+}
+
+.mobile-app {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    border-radius: 20px;
+    position: relative;
+    background-image: url(/img/iPhone-13-Pro-Front.webp),
+        radial-gradient(circle farthest-corner at 50% 50%, #575d5d, #313838);
+    background-repeat: no-repeat;
+    background-position: bottom -265% left 50%;
+    min-height: 550px;
+}
+.mobile-app h3 {
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    max-width: 276px;
+}
+.mobile-app p {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    max-width: 200px;
+}
+.stores {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.container-login {
+    background-color: #181f20;
+    padding: 45px 55px;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+}
+.container-login img {
+    margin-top: 30px;
+}
+.container-login p {
+    max-width: 230px;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 141%;
+}
+.lk__box.container.p0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width: 1200px) {
+    .lk__container {
+        width: 100%;
+    }
+    .mobile-app {
+        min-height: 550px;
+    }
+    .lk__box {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 992px) {
+    .container__category {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .lk__container {
+        flex-direction: column;
+    }
+    .lk__img {
+        background: url(../img/mob-lk.png) no-repeat;
+        background-size: 60%;
+        background-position: 105% 34%;
+    }
+    .lk {
+        padding: 50px 0 0px 50px;
+    }
+    .lk-text {
+        line-height: 140%;
+    }
+}
+@media (max-width: 576px) {
+    .lk__img {
+        background-size: 100%;
+        background-position: -50% 30%;
+    }
+    .lk {
+        padding: 40px 24px 0px 24px;
+    }
+    .lk-text {
+        margin: 34px 0 0;
+    }
+
+    .lk-btn {
+        display: none;
+    }
+    .mobile-app {
+      background-position: bottom -265% left 50%;
+      padding: 40px 35px;}
+}

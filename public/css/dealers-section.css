@@ -1,0 +1,90 @@
+.benefits {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+}
+.benefit {
+    padding: 40px;
+    border: 1px solid #d7d7d7;
+    border-radius: 20px;
+    /* max-width: 415px; */
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+    min-width: 310px;
+    justify-content: space-between;
+    width: 100%;
+}
+.benefit img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 65px;
+}
+.benefit h4{
+    margin-bottom: 0;
+}
+.benefit p {
+    font-weight: 300;
+    line-height: 1.2;
+}
+.title_benefits {
+    padding-bottom: 40px;
+    font-size: 25px;
+    color: black;
+    font-weight: 500;
+}
+
+
+.dealers--white {
+    background: #f7f7f7;
+}
+.dealers--white .dl-container form {
+    background-color: #ffffff;
+    gap: 30px;
+}
+
+.dealers--white input,
+.dealers--white .label-tel {
+    background-color: #ececec;
+}
+.dealers--white .label-file {
+    background-color: #f6fbf2;
+}
+.dealers--white label {
+    color: black;
+}
+.dealers--white .butn-white {
+    background-color: #181f20;
+    color: white;
+}
+.dealers--white .container-login {
+    background-color: #ffffff;
+    color: #181f20;
+}
+.dealers--white .container-login p {
+    color: #181f20;
+}
+
+@media (max-width: 1200px) {
+    .benefits {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px) {
+     
+    .benefit img {
+        margin-bottom: 0px;
+    }
+    .benefit {
+        gap: 20px;
+        padding: 20px;
+        min-width: 200px;
+    }
+    .benefit h4{
+font-size: 18px;
+    }
+    .title_benefits{
+        font-size: 32px
+    }
+}

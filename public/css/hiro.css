@@ -1,0 +1,74 @@
+section.hiro {
+  background: url(../img/hiro.webp) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 101px);
+  width: 100%;
+  margin: 0;
+}
+.butn.butn__hiro {
+  padding: 18px 44px;
+  margin-top: 65px;
+  display: block;
+  max-width: 175px;
+}
+.butn.butn__hiro:hover{
+  color: white;
+}
+.hiro h1 {
+  font-size: 70px;
+  color: white;
+  line-height: 101%;
+  font-weight: 500;
+  max-width: 800px;
+  letter-spacing: 0.03em;
+}
+.hiro p {
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+  max-width: 612px;
+  margin-top: 40px;
+}
+
+.hiro__social {
+  gap: 32px;
+  display: flex;
+}
+
+@media (max-width: 1400px) {
+}
+@media (max-width: 992px) {
+  .hiro h1 {
+    font-size: 60px;
+    max-width: 600px;
+  }
+  .hiro p{
+    line-height: 140%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hiro h1 {
+    font-size: 36px;
+    max-width: 350px;
+  }
+
+  .hiro p {
+    font-size: 16px;
+    max-width: 485px;
+    line-height: 140%;
+    margin-bottom: 30px;
+  }
+  .hiro__right {
+    display: none;
+  }
+  .butn {
+    width: 100%;
+  }
+  .hiro__social {
+    display: none;
+}
+.butn.butn__hiro {
+  max-width: 100%;
+}
+}

@@ -1,0 +1,145 @@
+.dealers {
+  background: url(../img/bg-dl.webp) no-repeat;
+  background-size: cover;
+}
+.dl-container {
+  display: flex;
+  gap: 20px;
+}
+.dl-container form {
+  border-radius: 20px;
+  background-color: #181f20;
+  width: min-content;
+  padding: 45px 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 25px;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  gap: 5px;
+}
+.input input {
+  padding: 18px 35px;
+  background-color: #272c2d;
+  border-radius: 8px;
+  border: none;
+  color: white;
+}
+.input input::placeholder {
+  font-family: "Cera Pro", sans-serif;
+  font-size: 15;
+}
+.input label {
+  color: white;
+  font-size: 15px;
+  line-height: 143%;
+}
+
+.butn-white {
+  width: 100%;
+  text-align: center;
+  padding: 17px;
+  text-transform: uppercase;
+  font-family: "Cera Pro", sans-serif;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.input-file {
+  display: none;
+}
+.label-file {
+  /* position: absolute; */
+  background-color: #242e1f;
+  cursor: pointer;
+  display: flex;
+  padding: 17px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 1px dashed #ccf60e;
+  border-radius: 8px;
+}
+
+.label-file img {
+  max-width: 20px;
+}
+
+input#phone, input#phone--ask, input#phone--reg{
+  padding-left: 60px;
+    /* background-image: url(https://www.pngplay.com/wp-content/uploads/10/Kazakhstan-Flag-Transparent-File.png); */
+    background-image: url('/img/flag.svg');
+    background-position: left 5% bottom 50%;
+    background-size: 30px;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width: 1200px) {
+  .input {
+    min-width: 220px;
+    gap: 5px;
+    justify-content: flex-end;
+  }
+  .input-tel input {
+    width: 125px;
+  }
+}
+@media (max-width: 992px) {
+  .dl-container {
+    flex-wrap: wrap;
+  }
+  .dl-container form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .inputs {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .input-tel input {
+    width: 150px;
+    left: 70px;
+  }
+  .input {
+    min-width: 220px;
+    gap: 8px;
+    width: 100%;
+  }
+  .label-tel img {
+    max-width: 29px;
+    margin-left: 10px;
+  }
+  .label-tel {
+    gap: 10px;
+  }
+  .inputs {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .dl-container form {
+    padding: 25px;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .container-login {
+    padding: 25px;
+  }
+}
