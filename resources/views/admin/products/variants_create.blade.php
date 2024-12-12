@@ -8,7 +8,7 @@
                     <h2 class="admin_title title-p">Добавление варианта товара</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn_back" href="{{ route('admin.products.show', [$product->id]) }}"> 
+                    <a class="btn btn_back" href="{{ route('admin.products.show', [$product->id]) }}">
                         <img src="{{asset('img/arrows-left.svg')}}" alt="">
                         Назад</a>
                 </div>
@@ -44,6 +44,22 @@
                     <label>Количество:</label>
                     <input type="quantity" step="1" name="quantity" class="form-control input-sm" placeholder="Количество">
                 </div>
+
+                <div class="form-group">
+                    <label>Артикул:</label>
+                    <input type="text" name="article" class="form-control" placeholder="Артикул">
+                </div>
+
+                <div class="form-group">
+                    <label>Реквизит:</label>
+                    <input type="text" name="requisite" class="form-control" placeholder="Реквизит">
+                </div>
+
+                <div class="form-group">
+                    <label>Место на складе:</label>
+                    <input type="text" name="store_place" class="form-control" placeholder="Место на складе">
+                </div>
+
 
                 <input type="hidden" name="id" value="{{ $product->id }}">
 

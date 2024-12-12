@@ -12,6 +12,8 @@ class PaymentMethod extends Model
     protected $fillable = [
         'title',
         'description',
+        'machine_title',
+        'visible',
         // Другие поля способа оплаты
     ];
 
@@ -19,5 +21,10 @@ class PaymentMethod extends Model
     public function orders()
     {
         return $this->hasMany(Order::class);
+    }
+
+    public static function scopeVisible($query)
+    {
+        return $query->where('visible', 1);
     }
 }

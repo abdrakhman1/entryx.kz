@@ -6,12 +6,7 @@
     margin-top: 0;
     padding-top: 0;
 }
-/* 
-.sect__top.sect__top--social {
-  margin-top: 40px;
-  padding-bottom: 0;
-} */
-
+ 
 .form-text {
     display: flex;
     flex-direction: column;
@@ -26,7 +21,15 @@
     gap: 10px;
 }
 .form-tel .input {
+    position: relative;
     max-width: 350px;
+}
+.form-tel .text-danger{
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    content: "";
+    transform: translate(0px, 100%);
 }
 .input-white input {
     background-color: #ffffff;
@@ -53,6 +56,31 @@
     flex-wrap: wrap;
 }
 
+.points_container_map{
+    overflow: hidden;
+    position: relative;
+}
+.marker-map{
+    width: 0;
+    height: 0;
+    position: relative;
+}
+.marker-map::after{
+    content: " ";
+    bottom: 0;
+    width: 25px;
+    height: 31px;
+    background: url(../img/marker.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: -50%;
+    transform: translate(-50%, 0);
+}
+
+.map_index{
+    height: 500px;
+    width: 100vw;
+}
 @media (max-width: 1400px) {
     .form-tel .input-tel input {
         width: 125px;

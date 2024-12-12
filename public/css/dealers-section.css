@@ -46,9 +46,11 @@
 .dealers--white input,
 .dealers--white .label-tel {
     background-color: #ececec;
+    color: black;
 }
 .dealers--white .label-file {
     background-color: #f6fbf2;
+    color: black;
 }
 .dealers--white label {
     color: black;

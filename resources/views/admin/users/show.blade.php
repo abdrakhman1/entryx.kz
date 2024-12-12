@@ -16,11 +16,11 @@
         </div>
 
         <div class="container_post card_admin">
-            <div class="card-text">
+            <div class="card_item">
                 <span>Имя:</span>
                 {{ $user->name }}
             </div>
-            <div class="card-text">
+            <div class="card_item card_item--no_border">
                 <span>Email:</span>
                 {{ $user->email }}
             </div>

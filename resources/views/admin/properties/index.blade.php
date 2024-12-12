@@ -35,5 +35,7 @@
                 @endforeach
             </tbody>
         </table>
+
+        {{ $properties->links() }}
     </div>
 @endsection

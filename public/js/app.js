@@ -24,4 +24,16 @@ $(document).ready(function () {
             $("#upload_image_input").hide();
         }
     });
+
+    $(".phone_mask").mask("7 (999) 9999999");
 });
+
+
+
+
+$('.go_back').on('click', function() {
+
+    window.history.back()
+
+  });
+

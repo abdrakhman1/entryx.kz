@@ -8,7 +8,7 @@
                     <h2 class="admin_title title-p">Редактировать товар</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn_back" href="{{ route('admin.products.index') }}"> <img
+                    <a class="btn btn_back" href="{{ route('admin.products.show', $product->id) }}"> <img
                             src="{{ asset('img/arrows-left.svg') }}" alt="">
                         Назад</a>
                 </div>
@@ -38,13 +38,32 @@
                 </div>
                 <div class="form-group">
                     <label>Категория:</label>
-                    <select name="category_id" class="form-control">
-                        <option value="{{ $product->category->id }}">{{ $product->category->title }}</option>
+                    <select name="category_id" class="form-select">
+                        @foreach ($all_categories as $category)
+                            <option
+                                value="{{ $category->id }}"
+                                @if ($product->category->id == $category->id)
+                                    selected
+                                @endif
+                            >
+                                {{ $category->title }}
+                            </option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Описание:</label>
                     <textarea class="form-control ckeditor" style="height:150px" name="description" placeholder="Description">{{ $product->description }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label>Артикул:</label>
+                    <input type="text" name="article" value="{{ $product->article }}" class="form-control"
+                        placeholder="">
+                </div>
+                <div class="form-group">
+                    <label>Реквизит:</label>
+                    <input type="text" name="requisite" value="{{ $product->requisite }}" class="form-control"
+                        placeholder="">
                 </div>
                 <div class="form-group">
                     <label>Цена:</label>
@@ -58,11 +77,17 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>Свойства:</h4>
+                    <label>Место на складе:</label>
+                    <input type="text" name="store_place" class="form-control" placeholder="Место на складе" value="{{ $product->store_place }}">
+                </div>
+
+
+                <div class="flex flex-col gap-sm">
+                    <h4 class="title-sub">Свойства:</h4>
                     @foreach ($all_properties as $prop)
-                        <div>
-                            {{ $prop->title }}:
-                            <input type="text" name="property[{{ $prop->id }}]"
+                        <div class="form-group">
+                            <label> {{ $prop->title }}: </label>
+                            <input class="form-control" type="text" name="property[{{ $prop->id }}]"
                                 value="{{ $product_properties->where('property_id', $prop->id)->first()->value ?? '' }}">
                         </div>
                     @endforeach

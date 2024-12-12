@@ -35,7 +35,13 @@
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td>{{ $user->roles->name }}</td>
+                        <td>
+                            @if ($user->role)
+                                {{ $user->role->name }}
+                            @else  
+                                <i>не указано</i>
+                            @endif
+                        </td>
                         <td>{{ $user->options }}</td>
                         <td>{{ $user->expiration_date }}</td>
                         <td>

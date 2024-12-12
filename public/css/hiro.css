@@ -17,17 +17,18 @@ section.hiro {
 .hiro h1 {
   font-size: 70px;
   color: white;
-  line-height: 101%;
+  line-height: 102%;
   font-weight: 500;
-  max-width: 800px;
+  max-width: 900px;
   letter-spacing: 0.03em;
 }
 .hiro p {
   font-size: 18px;
   color: white;
   font-weight: 300;
-  max-width: 612px;
+  max-width: 575px;
   margin-top: 40px;
+  line-height: 1.4;
 }
 
 .hiro__social {
@@ -50,7 +51,7 @@ section.hiro {
 @media (max-width: 576px) {
   .hiro h1 {
     font-size: 36px;
-    max-width: 350px;
+    /* max-width: 350px; */
   }
 
   .hiro p {

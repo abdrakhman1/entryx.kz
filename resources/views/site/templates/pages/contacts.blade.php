@@ -7,7 +7,7 @@
                 <div class="breadcrumb__container d-flex align-items-center">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Назад</a></li>
+                            <li class="breadcrumb-item"><a class="go_back" href="#!">Назад</a></li>
                             <li class="breadcrumb-item"><a href="#">Главная</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Контакты

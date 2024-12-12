@@ -11,7 +11,7 @@ class AdminPropertyController extends Controller
 {
     public function index()
     {
-        $properties = Property::paginate(20);
+        $properties = Property::paginate(40);
         return view('admin.properties.index', compact('properties'));
     }
 

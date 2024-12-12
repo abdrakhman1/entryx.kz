@@ -1,0 +1,319 @@
+.support .sect__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.support_item {
+    gap: 15px;
+    width: 100%;
+    display: flex;
+}
+.support_item .col {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+.support_item .col p {
+    color: #a5a5a5;
+}
+.support_items {
+    margin-top: 35px;
+}
+.support_item-box + .support_item-box {
+    margin-top: 10px;
+}
+.support_item-box {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 40px;
+    display: flex;
+}
+.btn_open_request {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    padding-left: 25px;
+    text-wrap: nowrap;
+    background: url(/img/icon/restart.svg) no-repeat center left;
+    background-size: 17px;
+    color: #81c441;
+}
+.btn_close_request {
+    display: flex;
+    align-items: center;
+    color: #ec5f5f;
+    font-size: 17px;
+    padding-left: 20px;
+    background: url(/img/icon/exit-red.svg) no-repeat center left;
+    text-wrap: nowrap;
+}
+
+.btn_close_request:hover,
+.btn_close_request:active {
+    transform: scale(1.02);
+    color: #ec5f5f;
+}
+.btn_open_request:hover,
+.btn_open_request:active {
+    transform: scale(1.02);
+    color: #81c441;
+}
+.indicator {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+}
+.indicator_box {
+    gap: 10px;
+    align-items: center;
+    display: flex;
+}
+.support_dialogs {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+.message_field {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.form_dialogs {
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+}
+.form_dialogs .form_message {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-end;
+}
+.message_user,
+.message_admin {
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 450px;
+    min-width: 200px;
+    position: relative;
+}
+.message_user + .message_admin,
+.message_admin + .message_user,
+.message_admin + .message_admin,
+.message_user + .message_user {
+    margin-top: 30px;
+}
+
+.message_admin {
+    background-color: white;
+    margin-right: auto;
+    border-radius: 20px 20px 20px 0;
+}
+.message_user {
+    background-color: #eaf2e3;
+    margin-left: auto;
+    border-radius: 20px 20px 0 20px;
+}
+
+.date {
+    position: absolute;
+    content: "";
+    bottom: 17px;
+    right: 30px;
+    transform: translate(10px, 10px);
+    font-size: 11px;
+    color: grey;
+}
+.user_role {
+    display: none;
+    position: absolute;
+    content: "";
+    top: -25px;
+    left: 0px;
+    font-size: 12px;
+    color: grey;
+}
+form.form_message {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-end;
+}
+#theme_message {
+    border: none;
+    width: 100%;
+    min-height: 50px;
+    border-radius: 15px;
+    padding: 0 15px;
+}
+.theme_box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 30px;
+}
+.support_close {
+    padding: 30px;
+    background-color: #e8e8e8;
+    margin-top: 30px;
+    border-radius: 20px;
+    color: grey;
+}
+.notifies_container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+}
+.message_notify {
+    font-size: 12px;
+    color: gray;
+}
+.title_notify {
+    font-size: 14px;
+    font-weight: 400;
+}
+.date_notify {
+    color: grey;
+    font-size: 10px;
+    text-align: end;
+}
+.butn_notify {
+    display: flex;
+    align-items: center;
+    width: 10px;
+    height: 9px;
+    opacity: 0.7;
+    background: url(/img/icon/close-grey.svg) no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.top_notify {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.notifies_item.not-read {
+    border: 1px solid #cadfb5;
+
+    background-color: #f8fff2;
+}
+.notifies_item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ededed;
+    position: relative;
+}
+.notifies_container .notice_exit {
+    height: 10px;
+    width: 10px;
+}
+.form_message .btn_box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1400px) {
+    .support_item-box {
+        padding: 20px 25px;
+    }
+    .support_item .col {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .support_item {
+        font-size: 14px;
+    }
+    .btn_close_request {
+        font-size: 14px;
+        padding-left: 17px;
+        background-size: 10px;
+    }
+}
+@media (max-width: 1200px) {
+    .btn_close_request {
+        padding-left: 6px;
+        text-wrap: wrap;
+        line-height: 1;
+        text-align: center;
+    }
+    .support_item .col p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .support_item {
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .support_item-box {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .btn_close_request {
+        padding-left: 20px;
+    }
+    .support_item .col {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    .support_item {
+        font-size: 16px;
+    }
+    .support_item .col p {
+        font-size: 14px;
+    }
+    .btn_close_request {
+        font-size: 16px;
+        padding-left: 25px;
+        background-size: 12px;
+    }
+    .support .sect__bottom {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        gap: 25px;
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .btn_open_request:hover,
+    .btn_open_request:active {
+        transform: scale(1.03);
+    }
+    .container.support {
+        max-width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .support_item .col {
+        justify-content: space-between;
+    }
+    .support .butn-green {
+        max-width: 100%;
+        width: 100%;
+    }
+    .form_message .btn_box {
+        width: 100%;
+    }
+    .btn_box .butn {
+        width: 100%;
+        justify-content: center;
+        max-width: 100%;
+    }
+}

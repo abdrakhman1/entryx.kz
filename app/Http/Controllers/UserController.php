@@ -22,20 +22,38 @@ class UserController extends Controller
 
     public function admin_login_form_submit(Request $request)
     {
-        $user = User::where('email', $request->email)->first();
-        if($user != null && Hash::check($request->password, $user->password)) { 
-            session(
-                [
-                    'name' => $user->name,
-                ]
-            );
-            $credentials = $request->only('email', 'password');
-            Auth::attempt($credentials);
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user();
 
-            return redirect('/admin/dashboard');
-        } else {
-            return redirect('/admin_login');
+            if ($user->hasRole('dealer')) {
+                return redirect()->route('portal.user.profile')->withSuccess('Вы вошли');
+            } elseif ($user->hasRole('sa')) {
+                return redirect()->route('admin.dashboard');
+            } elseif ($user->hasRole('storeman')) {
+                return redirect()->route('storeman.index');
+            }
+
+            return redirect('/portal/login');
         }
+
+        return redirect('/portal/login')->withSuccess('Login details are not valid');
+
+
+        // $user = User::where('email', $request->email)->first();
+        // if($user != null && Hash::check($request->password, $user->password)) { 
+        //     session(
+        //         [
+        //             'name' => $user->name,
+        //         ]
+        //     );
+        //     $credentials = $request->only('email', 'password');
+        //     Auth::attempt($credentials);
+
+        //     return redirect('/admin/dashboard');
+        // } else {
+        //     return redirect('/admin_login');
+        // }
     }
 
     public function logout()

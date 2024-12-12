@@ -23,4 +23,29 @@ class Property extends Model
     {
         return $this->belongsToMany(Product::class, 'product_property_values')->withPivot('value');
     }
+
+    public function propertyValues()
+    {
+        return $this->hasMany(PropertyValue::class);
+    }
+
+
+    public static function filter_data($category_id = null)
+    {
+        $query = PropertyValue::with('property');
+
+        if ($category_id !== null) {
+            $query->where('category_id', $category_id);
+        }
+
+        $propertyValuesGrouped = $query
+            ->orderBy('id', 'desc')
+            ->get()
+            ->groupBy('property_id')
+            ->map(function ($values) {
+                return $values->unique('value');
+            });
+
+        return $propertyValuesGrouped;
+    }
 }

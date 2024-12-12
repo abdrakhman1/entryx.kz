@@ -22,6 +22,18 @@ class BranchOffice extends Model
         'description',
         'latitude',
         'longitude',
-        'city_id'
+        'city_id',
+        'user_id',
+        'is_visible'
     ];
+
+    public function scopeVisible($query)
+    {
+        return $query->where('is_visible', true);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

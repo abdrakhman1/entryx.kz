@@ -7,6 +7,10 @@
     <div class="container">
         <h1 class="admin_title title-p">Публикации </h1>
         <a href="{{ route('admin.posts.create') }}" class="btn btn_add">Создать пост</a>
+
+        @if ($posts->isEmpty())
+            
+        @else
         <table class="admin_table table">
             <thead>
                 <tr>
@@ -34,12 +38,17 @@
                             <form action="{{ route('admin.posts.destroy', $post) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn_danger btn-sm" onclick="return confirm('Are you sure you want to delete this post?')">Delete</button>
+                                <button type="submit" class="btn btn_danger btn-sm"
+                                    onclick="return confirm('Are you sure you want to delete this post?')">Delete</button>
                             </form>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+        @endif
+        
+    
+
     </div>
 @endsection

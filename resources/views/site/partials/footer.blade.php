@@ -1,88 +1,120 @@
 <footer>
-      <div class="footer__top container">
+    <div class="footer__top container">
         <div class="footer__left">
-          <img src="./img/logo-big.svg" alt="logo" />
-          <div class="stores stores--foot">
-            <a href="#!" class="store">
-              <img src="./img/app-foot.svg" alt="Appstore" />
+            <a href="/">
+                <img src="/img/logo-big.svg" alt="logo" />
             </a>
-            <a href="#!" class="store">
-              <img src="./img/googl-foot.svg" alt="Google Play" />
-            </a>
-          </div>
+
+            <div class="stores stores--foot">
+                <a href="#!" class="store">
+                    <img src="/img/app-foot.svg" alt="Appstore" />
+                </a>
+                <a href="#!" class="store">
+                    <img src="/img/googl-foot.svg" alt="Google Play" />
+                </a>
+            </div>
         </div>
         <div class="footer__center">
-          <div>
-            <h4 class="black m0">Меню</h4>
-            <nav class="nav">
-              <ul class="nav__list--foot">
-                <li class="nav__item">
-                  <a href="/">Главная</a>
-                </li>
-                <li class="nav__item">
-                  <a href="/catalog">Каталог</a>
-                </li>
-                <li class="nav__item">
-                  <a href="/about">О компании</a>
-                </li>
-                <li class="nav__item">
-                  <a href="/dealers">Дилерам</a>
-                </li>
-                <li class="nav__item">
-                  <a href="/points_sale">Точки продаж</a>
-                </li>
-                <li class="nav__item">
-                  <a href="/contacts">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div>
-            <h4 class="black m0">Бренд</h4>
-            <ul class="nav__list--foot">
-              <li class="nav__item">
-                <a href="#!">MEGI DOORS</a>
-              </li>
-              <li class="nav__item">
-                <a href="#!">Ретвизан</a>
-              </li>
-              <li class="nav__item">
-                <a href="#!">STR</a>
-              </li>
-            </ul>
-          </div>
+            <div>
+                <h4 class="black m0">Меню</h4>
+                <nav class="nav">
+                    <ul class="nav__list--foot">
+                        <li class="nav__item">
+                            <a href="{{ route('site.home') }}">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="{{ route('site.catalog') }}">Каталог</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="{{ route('site.about') }}">О компании</a>
+                        </li>
+                        <!-- <li class="nav__item">
+                            <a href="{{ route('site.dealers') }}">Партнерам</a>
+                        </li> -->
+                        <li class="nav__item">
+                            <a href="{{ route('site.branch_offices') }}">Точки продаж</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="{{ route('site.contacts') }}">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div>
+                <h4 class="black m0">Бренд</h4>
+                <ul class="nav__list--foot">
+                    <li class="nav__item">
+                        <a href="{{ route('site.catalog.brand', 'megi') }}">MEGI DOORS</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ route('site.catalog.brand', 'ретвизан') }}">Ретвизан</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ route('site.catalog.brand', 'STR') }}">STR</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ route('site.catalog.brand', 'phillips') }}">Phillips</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ route('site.catalog.brand', 'ela') }}">ELA</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="footer__right">
-          <div>
-            <a class="tel" href="tel:+77767771111"
-              ><h3 class="text-grad">+7 (776) 777-11-11</h3></a
-            >
-            <a class="email" href="mailto:entryx.ast@gmail.com"
-              >entryx.ast@gmail.com</a
-            >
-          </div>
-          <div class="address--foot">
-            <p>Адрес:</p>
-            <a href="#!">Казахстан, г. Астана, ул. Шарбакты, 14/1</a>
-          </div>
-          <div class="icon">
-            <a href="#!" class="icon-item">
-              <img src="./img/you.svg" alt="youtube" />
-            </a>
-            <a href="#!" class="icon-item">
-              <img src="./img/telegr.svg" alt="telegram" />
-            </a>
-            <a href="#!" class="icon-item">
-              <img src="./img/inst.svg" alt="instagram" />
-            </a>
-          </div>
+            <div>
+                <a class="tel" href="tel:+77073002077">
+                    <h3 class="text-grad">+7 (707) 300-20-77</h3>
+                </a>
+                <a class="tel" href="tel:+7 (906) 066-30-55">
+                    <h3 class="text-grad">+7 (906) 066-30-55</h3>
+                </a>
+                <a class="email" href="mailto:entryx.ast@gmail.com">entryx.ast@gmail.com</a>
+            </div>
+            <div class="address--foot">
+                <p>Адрес:</p>
+                <p>Казахстан, г. Астана, ул. Шарбакты, 14/1</p>
+            </div>
+            <div class="icon">
+                <a href="https://www.youtube.com/@entryx" class="icon-item">
+                    <img src="/img/you.svg" alt="youtube" />
+                </a>
+                <a href="https://t.me/EntryX" class="icon-item">
+                    <img src="/img/telegr.svg" alt="telegram" />
+                </a>
+                <a href="https://www.instagram.com/entryx_kz" class="icon-item">
+                    <img src="/img/inst.svg" alt="instagram" />
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="copyright container">
-        <p>© 2023 Entrix. Все права защищены.</p>
-        <a href="#!">Политика конфиденциальности</a>
-        <a href="https://zig-zag.group/"
-          >Разработка сайта <img src="./img/ZigZag_white1 2.svg" alt="zigzag"
-        /></a>
-      </div>
-    </footer>
+    </div>
+    <div class="container container_documents">
+        <ul class="list_row">
+            <li class="nav__item nav__item-img">
+                <img src="/img/icon/logos_visa.svg" alt="visa">
+                <img src="/img/icon/logos_mastercard.svg" alt="mastercard">
+            </li>
+
+
+            <li class="nav__item">
+                <a href="{{ route('site.about.payment') }}">Оплата</a>
+            </li>
+            <li class="nav__item">
+                <a href="{{ route('site.about.requisites') }}">Реквизиты</a>
+            </li>
+
+            <li class="nav__item">
+                <a href="{{ route('site.about.public_contract') }}">Публичная оферта</a>
+            </li>
+            <li class="nav__item">
+                <a href="{{ route('site.about.privacy') }}">Политика конфиденциальности</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="copyright container">
+        <p>© {{ date('Y') }} Entryx. Все права защищены.</p>
+        {{-- <a download href="/docs/Privacy_policy_entryx.docx">Политика конфиденциальности</a> --}}
+    </div>
+</footer>

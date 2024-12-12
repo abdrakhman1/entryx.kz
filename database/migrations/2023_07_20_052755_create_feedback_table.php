@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('filepath1')->nullable();
             $table->string('filepath2')->nullable();
             $table->text('message')->nullable();
+            $table->integer('type')->default(1);
             $table->timestamp('read_at')->nullable();
             $table->timestamps();
         });

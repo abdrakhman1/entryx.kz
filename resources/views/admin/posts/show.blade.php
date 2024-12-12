@@ -17,8 +17,8 @@
         
         <div class="container_post card_admin">
             <div><img src="{{ $post->image }}" alt=""></div>
-        <p class="card-text">{!! $post->content !!}</p>
-        <p class="card-text"><span>Visible:</span>{{ $post->visible ? 'Yes' : 'No' }}</p>
+        <p class="card_item">{!! $post->content !!}</p>
+        <p class="card_item"><span>Visible:</span>{{ $post->visible ? 'Yes' : 'No' }}</p>
         <div>
             <a href="{{ route('admin.posts.edit', $post) }}" class="btn btn_primary">Редактировать</a>
         <form action="{{ route('admin.posts.destroy', $post) }}" method="POST" class="d-inline">

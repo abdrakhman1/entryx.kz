@@ -17,9 +17,7 @@ class AdminLogin
      */
     public function handle(Request $request, Closure $next)
     {
-        $user = Auth::user();
-        // dd($user);
-        if ($user != null && $user->role_id == 1 ) {
+        if ($request->user() != null && $request->user()->hasRole('sa') || $request->user()->hasRole('manager') ) {
             return $next($request);
         }
 

@@ -2,15 +2,13 @@
 $ismain = isset($isindex) ? $isindex : false;
 @endphp
 
- 
-
 @if ($ismain)
 <div class="d-flex gap-4 lk__box container p0">
 @else
-<div class="d-flex gap-4 lk__box container ">
+<div class="d-flex gap-4 lk__box container">
 @endif
- 
- 
+
+
      <div class="lk__container">
          <div class="lk">
              <h3>
@@ -18,7 +16,7 @@ $ismain = isset($isindex) ? $isindex : false;
              </h3>
              <div class="lk-text">
                  <p>
-                     Использование личного кабинета дилера помогает разгрузить
+                     Использование личного кабинета партнера помогает разгрузить
                      менеджеров клиентов от задач по оформлению заказов, работе с
                      рекламациями и обращениями клиентов, а также обеспечению
                      клиентов информационными и рекламными материалами.
@@ -28,8 +26,8 @@ $ismain = isset($isindex) ? $isindex : false;
                      клиентов и повышению лояльности существующих.
                  </p>
              </div>
-             <a href="#!" class="lk-btn">Узнать подробнее
-                 <img src="./img/arrrow.svg" alt="arrow" />
+             <a href="/about" class="lk-btn">Узнать подробнее
+                 <img src="/img/arrrow.svg" alt="arrow" />
              </a>
          </div>
          <div class="lk__img"></div>
@@ -41,10 +39,10 @@ $ismain = isset($isindex) ? $isindex : false;
          <p>Его можно скачать в Google Play или Apple Store.</p>
          <div class="stores">
              <a href="#!" class="store">
-                 <img src="./img/app-dark.svg" alt="Appstore" />
+                 <img src="/img/app-dark.svg" alt="Appstore" />
              </a>
              <a href="#!" class="store">
-                 <img src="./img/google-dark.svg" alt="Google Play" />
+                 <img src="/img/google-dark.svg" alt="Google Play" />
              </a>
          </div>
      </div>

@@ -17,7 +17,7 @@
                 <form class="form_admin" action="{{ route('admin.products.documents.store', $product) }}" method="POST" enctype="multipart/form-data">
             @csrf
 
-            <div class="mb-3">
+            <div class="form-group">
                 <label for="title" class="form-label">Название:</label>
                 <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}">
                 @error('title')
@@ -25,9 +25,9 @@
                 @enderror
             </div>
 
-            <div class="form-group mb-3">
+            <div class="form-group ">
                 <label for="document_type_id">Тип</label>
-                <select class="form-control" id="document_type_id" name="document_type_id">
+                <select class="form-select" id="document_type_id" name="document_type_id">
                     <option value="">-- выберите тип ---</option>
                     @foreach ($document_types as $type)
                         <option value="{{ $type->id }}">{{ $type->name }}</option>
@@ -35,7 +35,7 @@
                 </select>
             </div>
 
-            <div class="mb-3" id="upload_image_input">
+            <div class="form-group" id="upload_image_input">
                 <label for="file" class="form-label">Загрузить файл:</label>
                 <input type="file" class="form-control" name="file" id="file">
                 @error('file')
@@ -43,7 +43,7 @@
                 @enderror
             </div>
 
-            <div class="mb-3" id="url_input">
+            <div class="form-group" id="url_input">
                 <label for="url" class="form-label">Файл URL:</label>
                 <input type="text" class="form-control" name="url" id="url" value="{{ old('url') }}">
                 @error('url')

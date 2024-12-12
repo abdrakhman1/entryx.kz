@@ -8,8 +8,8 @@
                     <h2 class="admin_title title-p">Добавление товара</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn_back" href="{{ route('admin.products.index') }}"> 
-                        <img src="{{asset('img/arrows-left.svg')}}" alt="">
+                    <a class="btn btn_back" href="{{ route('admin.products.index') }}">
+                        <img src="{{ asset('img/arrows-left.svg') }}" alt="">
                         Назад</a>
                 </div>
             </div>
@@ -28,7 +28,6 @@
 
         <form action="{{ route('admin.products.store') }}" method="POST">
             @csrf
-
             <div class="row form_admin">
                 <div class="form-group">
                     <label>Название:</label>
@@ -36,7 +35,7 @@
                 </div>
                 <div class="form-group">
                     <label>Категория:</label>
-                    <select name="category_id" class="form-control">
+                    <select name="category_id" class="form-select">
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->title }}</option>
                         @endforeach
@@ -48,16 +47,25 @@
                 </div>
                 <div class="form-group">
                     <label>Цена:</label>
-                    <input   type="number" step="0.01" name="price" class="input_price form-control input-sm" placeholder="Цена">
-                    
+                    <input type="number" step="0.01" name="price" class="input_price form-control input-sm"
+                        placeholder="Цена">
                 </div>
 
                 <div class="form-group">
                     <label>Количество:</label>
-                    <input type="number" name="quantity" class="form-control input-sm" placeholder="Количество" />
-
-                    
+                    <div>
+                        <input type="number" name="quantity" class="form-control input-sm" placeholder="Количество" />
+                        <input class="custom-checkbox" type="checkbox" id="onRequest" name="onRequest" value="no">
+                        <label class="label_check" for="onRequest">Под заказ</label>
+                    </div>
                 </div>
+
+                <div class="form-group">
+                    <label>Место на складе:</label>
+                    <input type="text" name="store_place" class="form-control" placeholder="Место на складе" value="{{ old('store_place') }}">
+                </div>
+
+
                 <button type="submit" class="btn btn_add">Добавить</button>
             </div>
         </form>
@@ -75,5 +83,5 @@
             filebrowserUploadMethod: 'form'
         });
     </script>
-    
+
 @endsection

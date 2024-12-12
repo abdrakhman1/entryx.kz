@@ -21,10 +21,7 @@ class AdminDocumentController extends Controller
 
     public function make_main(Product $product, Document $document)
     {
-        // $product->documents->update([
-        //     'main' => false
-        // ]);
-        Document::where('product_id', $product->id)->update([
+        $product->documents()->update([
             'main' => false
         ]);
         $document->main = true;
@@ -42,26 +39,23 @@ class AdminDocumentController extends Controller
             'link' => 'nullable|url|max:255',
         ]);
 
-        $document = new Document([
-            'title' => $request->title,
-            'link' => $request->url,
-            'product_id' => $request->product_id,
-        ]);
-
         $filepath = '';
         if($request->hasFile('file')) {
             $filepath = Post::uploadImage($request->file('file'));
         }
-        $document->file_path = $filepath;
-
-        $document->document_type_id = $request->document_type_id;
-        $product->documents()->save($document);
+        $product->documents()->create([
+            'title' => $request->title,
+            'link' => $request->url,
+            'file_path' => $filepath,
+            'document_type_id' => $request->document_type_id,
+        ]);
 
         return redirect()->route('admin.products.show', $product)->with('success', 'Document added successfully.');
     }
 
-    public function destroy(Product $product, Document $document)
+    public function destroy(Document $document)
     {
+        $product = $document->documentable;
 
         if (!empty($document->file_path) && file_exists($document->getImageSystemPath())){
             unlink($document->getImageSystemPath());
@@ -69,6 +63,6 @@ class AdminDocumentController extends Controller
 
         $document->delete();
 
-        return redirect()->route('admin.products.show', $document->product)->with('success', 'Document deleted successfully.');
+        return redirect()->route('admin.products.show', $product)->with('success', 'Document deleted successfully.');
     }
 }

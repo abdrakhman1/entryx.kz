@@ -46,7 +46,7 @@
 
             <div class="form-group">
                 <label for="visible">Видимость</label>
-                <select class="form-control" id="visible" name="visible">
+                <select class="form-select" id="visible" name="visible">
                     <option value="1" {{ $post->visible ? 'selected' : '' }}>Yes</option>
                     <option value="0" {{ !$post->visible ? 'selected' : '' }}>No</option>
                 </select>

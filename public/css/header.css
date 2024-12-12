@@ -22,7 +22,7 @@
 }
 .tel {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: #181f20;
 }
 .email {
@@ -50,8 +50,8 @@ button.butn.butn_reg:after {
     z-index: -1;
     height: calc(100% - 4px);
     width: calc(100% - 4px);
-} 
- 
+}
+
 .butn.butn_reg {
     background: white;
     position: relative;
@@ -59,7 +59,9 @@ button.butn.butn_reg:after {
     z-index: 1;
     font-weight: 400;
 }
-
+.navbar-nav {
+    gap: 25px;
+}
 .navbar {
     padding: 0;
     background-color: white;
@@ -95,30 +97,44 @@ button.butn.butn_reg:after {
 .container-fluid .navbar-brand {
     margin-right: 30px;
 }
+
+.nav-link {
+    padding: 0 !important;
+    cursor: pointer;
+}
+
 /* -----------------------------молдальное окно----------------------- */
+.modal-dialog-centered {
+    min-height: max-content;
+    height: max-content;
+}
 .modal-content {
     display: flex;
     background-color: #ffffff;
     border-radius: 30px;
-    padding: 40px;
     width: 100%;
 }
 .form-modal {
     display: flex;
     gap: 30px;
+    padding: 40px;
     flex-direction: column;
-   
 }
-
-.form-modal .input.input-white input{
+.form-modal .inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 25px;
+}
+.form-modal .input.input-white input {
     background-color: #ececec;
 }
-.form_text{
+.form_text {
     display: flex;
     gap: 20px;
     flex-direction: column;
 }
-.butn_close{
+.butn_close {
     position: absolute;
     right: 0;
     background: transparent;
@@ -127,12 +143,52 @@ button.butn.butn_reg:after {
     color: white;
     width: 40px;
     height: 40px;
-    transform: translate(100%, -100%);
+    transform: translate(100%, -50%);
     background-repeat: none;
     background-position: center center;
     background-size: contain;
     background-image: url(/img/icon/close.svg);
 }
+.nav-item.active .nav-link {
+    color: #6ba219;
+    max-width: max-content;
+    border-bottom: 1px solid #6ba21982;
+}
+.modal_form{
+    padding-top: 70px;
+  }
+  .nav-item--open{
+    display: none;
+  }
+  .nav-item.relative.open .nav-item--open{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: max-content;
+    gap: 10px;
+    background: white;
+    padding: 15px;
+    box-shadow: 2px 1px 4px 0px #bababa91;
+    border-radius: 5px;
+
+  }
+  .nav-item.relative.open .nav-link{
+    border-bottom: none;
+
+  }
+  .nav-item.relative .nav-link{
+    display: flex;
+    gap: 11px;
+    align-items: center;
+
+  }
+  .nav-item.relative .nav-link img{
+    width: 10px;
+    transform: rotate(180deg);
+  }
 
 @media (max-width: 1400px) {
     .nav-wrap {
@@ -151,19 +207,21 @@ button.butn.butn_reg:after {
 
 @media (max-width: 1400px) {
     .header__contact .tel {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 @media (max-width: 1200px) {
     .header__contact {
         display: none;
     }
-
     .nav-wrap.navbar-nav {
         flex: 2;
     }
     .header__contacts {
         flex: 1;
+    }
+    .navbar-nav {
+        gap: 15px;
     }
 }
 
@@ -190,10 +248,8 @@ button.butn.butn_reg:after {
 
 @media (max-width: 768px) {
     .butn_close {
-        transform: translate(-30%, 30%);
-        background-image: url(/img/icon/close-black.svg);
+        background: transparent;
     }
-
 }
 @media (max-width: 576px) {
     .header {
@@ -227,7 +283,7 @@ button.butn.butn_reg:after {
     .navbar-collapse .navbar-nav {
         padding-top: 40px;
         flex-direction: column;
-        gap: 0px;
+        /* gap: 0px; ломает отступы в хедер */
     }
     .header__contact {
         display: flex;

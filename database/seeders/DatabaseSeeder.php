@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\City;
 use App\Models\PostType;
 use App\Models\Product;
+use \App\Models\Role;
+use \App\Models\DocumentType;
+use \App\Models\User;
+use \Database\Seeders\ProjectSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,60 +22,96 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        /**
+         * Roles
+         */
+        Role::create([
+            'name' => 'Суперадмин',
+            'machine_title' => 'sa',   
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Role::create([
+            'name' => 'Менеджер',
+            'machine_title' => 'manager',
+        ]);
 
-        \App\Models\User::create([
+        Role::create([
+            'name' => 'Покупатель',
+            'machine_title' => 'customer',
+        ]);
+
+        Role::create([
+            'name' => 'Заведующий складом',
+            'machine_title' => 'storeman',
+        ]);
+
+        Role::create([
+            'name' => 'Дилер',
+            'machine_title' => 'dealer',
+        ]);
+
+
+
+        
+
+        /**
+         * Users
+         */
+        User::create([
             'email' => 'admin@entryx.loc',
             'password' => Hash::make('t5ggt816645u65'),
             'name' => 'Суперадмин',
             'role_id' => 1,
         ]);
 
-        \App\Models\User::create([
+        User::create([
             'email' => 'customer@entryx.loc',
             'password' => Hash::make('t678gvfd5u65'),
             'name' => 'Тестовый покупатель',
             'role_id' => 3,
         ]);
 
-        \App\Models\DocumentType::create(
+        User::create([
+            'email' => 'dealer@entryx.loc',
+            'password' => Hash::make('t005165d5u65'),
+            'name' => 'Тестовый дилер',
+            'role_id' => Role::where('machine_title', 'dealer')->first()->id,
+        ]);
+
+
+
+
+        /**
+         * Document types
+         */
+        DocumentType::create(
             [
                 'name' => 'Изображение товара',
                 'machine_title' => 'product_image',
             ]
         );
 
-        \App\Models\DocumentType::create(
+        DocumentType::create(
             [
                 'name' => 'Ссылка на видео товара',
                 'machine_title' => 'product_video_link',
             ]
         );
 
-        \App\Models\Role::create([
-            'name' => 'Суперадмин',
-            'machine_title' => 'sa',
-        ]);
+        DocumentType::create(
+            [
+                'name' => 'Реквизиты компании',
+                'machine_title' => 'requisites',
+            ]
+        );
 
-        \App\Models\Role::create([
-            'name' => 'Менеджер',
-            'machine_title' => 'manager',
-        ]);
+        DocumentType::create(
+            [
+                'name' => 'Справка о госрегистрации компании',
+                'machine_title' => 'govregistration',
+            ]
+        );
 
-        \App\Models\Role::create([
-            'name' => 'Покупатель',
-            'machine_title' => 'customer',
-        ]);
-
-        \App\Models\Role::create([
-            'name' => 'Заведующий складом',
-            'machine_title' => 'storeman',
-        ]);
 
         \App\Models\Setting::create([
             'other' => ''
@@ -79,7 +119,14 @@ class DatabaseSeeder extends Seeder
 
 
 
+        
 
+
+
+
+        /**
+         * Cities
+         */
         City::create(
             [
                 'title' => 'Астана',
@@ -109,6 +156,12 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
+
+
+
+        /**
+         * Post types
+         */
         PostType::create([
             'title' => 'Страница',
             'machine_title' => 'page',
@@ -140,5 +193,10 @@ class DatabaseSeeder extends Seeder
         ]);
         
 
+
+        /**
+         * Project
+         */
+        $this->call(ProjectSeeder::call);
     }
 }

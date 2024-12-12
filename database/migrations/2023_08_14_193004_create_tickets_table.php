@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('message');
             $table->integer('type')->default(1);
             $table->enum('status', ['open', 'closed'])->default('open');
+            $table->timestamp('read_at')->nullable();
             $table->timestamps();
         });
     }

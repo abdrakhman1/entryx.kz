@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained();
+            $table->morphs('documentable');
             $table->foreignId('document_type_id')->constrained('document_types');
             $table->string('title')->nullable();
             $table->string('file_path')->nullable();
+            $table->text('description')->nullable();
+            $table->json('options')->nullable();
             $table->string('link')->nullable();
             $table->boolean('main')->nullable();
             $table->timestamps();

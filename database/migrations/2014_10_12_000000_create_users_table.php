@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('phone')->nullable();
+            $table->string('bin')->nullable();
+            $table->string('company_name')->nullable();
             $table->integer('role_id')->default(0);
             $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();

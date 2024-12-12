@@ -17,12 +17,12 @@
         
 
         <div class="form_admin card_admin">
-                <div class="card-text">
-                    <strong>Название:</strong>
+                <div class="card_item">
+                    <span>Название:</span>
                     {{ $category->title }}
                 </div>
-                <div class="card-text">
-                    <strong>Parent:</strong>
+                <div class="card_item">
+                    <span>Parent:</span>
                     {{ $category->parent ? $category->parent->title : 'None' }}
                 </div>
         </div>

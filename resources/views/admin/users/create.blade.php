@@ -8,7 +8,7 @@
                     <h2 class="admin_title title-p">Добавление пользователя</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn_back" href="{{ route('admin.users.index') }}"> 
+                    <a class="btn btn_back" href="{{ route('admin.users.index') }}">
                         <img src="{{asset('img/arrows-left.svg')}}" alt="">
                         Назад</a>
                 </div>
@@ -20,7 +20,7 @@
                     {{-- <div class="card-header">{{ __('Create User') }}</div> --}}
 
                     @if ($errors->any())
-                 
+
                         <div class="alert alert-danger">
                             <strong>Whoops!</strong> There were some problems with your input.<br><br>
                             <ul>
@@ -36,7 +36,7 @@
 
                             <div class="form-group row">
                                 <label for="name"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">Имя</label>
 
                                 <div>
                                     <input id="name" type="text"
@@ -53,11 +53,11 @@
 
                             <div class="form-group row">
                                 <label for="phone"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">Телефон</label>
 
                                 <div>
                                     <input id="phone" type="text"
-                                        class="form-control @error('phone') is-invalid @enderror" name="phone"
+                                        class="form-control @error('phone') is-invalid @enderror phone_mask" name="phone"
                                         value="{{ old('phone') }}" required autocomplete="phone" autofocus>
 
                                     @error('phone')
@@ -70,7 +70,7 @@
 
                             <div class="form-group row">
                                 <label for="email"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
+                                    class="col-md-4 col-form-label text-md-right"> Email </label>
 
                                 <div>
                                     <input id="email" type="email"
@@ -87,7 +87,7 @@
 
                             <div class="form-group row">
                                 <label for="password"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">Пароль</label>
 
                                 <div>
                                     <input id="password" type="password"
@@ -104,7 +104,7 @@
 
                             <div class="form-group row">
                                 <label for="password-confirm"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">Подтвердите пароль</label>
 
                                 <div>
                                     <input id="password-confirm" type="password" class="form-control"
@@ -114,11 +114,11 @@
 
                             <div class="form-group row">
                                 <label for="role"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">Роль</label>
 
                                 <div>
                                     <select id="role" class="form-control @error('role') is-invalid @enderror"
-                                        name="role" required>
+                                        name="role_id" required>
                                         <option value="">-- Select Role --</option>
                                         @foreach ($roles as $role)
                                             <option value="{{ $role->id }}">{{ $role->name }}</option>
@@ -134,15 +134,13 @@
                             </div>
 
                             <div class="form-group row mb-0">
-                                 
                                     <button type="submit" class="btn btn_add">
-                                        {{ __('Create') }}
+                                        Сохранить
                                     </button>
-                                
                             </div>
                         </form>
                 {{-- </div>
             </div> --}}
-         
+
     </div>
 @endsection

@@ -20,7 +20,7 @@
                     </div>
                 @endif
                 <div class="form_decor"></div>
-                <form method="POST" action="/admin_login">
+                <form method="POST" action="{{ route('portal.login.submit') }}">
                     @csrf
                     <div>
                         <h2 class="form_title">Вход</h2>

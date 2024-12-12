@@ -14,7 +14,9 @@ class ProductVariant extends Model
         'title',
         'price',
         'quantity',
-        // Другие поля варианта товара
+        'article',
+        'store_place',
+        'requisite'
     ];
 
     public function product()

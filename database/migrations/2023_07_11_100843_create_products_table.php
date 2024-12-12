@@ -12,6 +12,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->foreignId('category_id')->constrained()->nullable()->default(null);
             $table->string('title');
+            $table->string('slug')->nullable();
             $table->string('article')->nullable();
             $table->text('description')->nullable();
             $table->decimal('price', 8, 2);

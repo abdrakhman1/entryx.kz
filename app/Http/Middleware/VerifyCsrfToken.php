@@ -12,6 +12,8 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
+        'cloudpayments_callback',
+        'hmack_test',
         //
     ];
 }

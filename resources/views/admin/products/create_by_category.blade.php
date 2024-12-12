@@ -28,7 +28,6 @@
 
         <form action="{{ route('admin.products.store') }}" method="POST">
             @csrf
-
             <div class="row form_admin">
                 <div class="form-group">
                     <label>Название:</label>
@@ -56,15 +55,12 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>Свойства:</h4>
+                    <h4 class="card_title">Свойства:</h4>
                     @foreach ($properties as $property)
                         {{ $property->title }}
                         <input type="text" name="property[{{ $property->id }}]" value="">
                     @endforeach
                 </div>
-
-                
-
                 <button type="submit" class="btn btn_add">Добавить</button>
             </div>
         </form>

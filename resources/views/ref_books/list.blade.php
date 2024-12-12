@@ -9,7 +9,7 @@
             <div class="col">
                 <h1 class="admin_title title-p">Справочники</h1>
     
-                <div class="a_button mb-5">
+                <div class="a_button ">
                     <a href="/refbooks/new" class="btn btn_add  ">Добавить справочник</a>
                 </div>
     

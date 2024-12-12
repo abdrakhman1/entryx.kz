@@ -1,0 +1,394 @@
+.field_company {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+.info_items {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+.info_item_col {
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+    display: inline-flex;
+}
+.info_item_row {
+    flex-direction: row;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.info_item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    position: relative;
+}
+.info_item .item {
+    padding: 7px 0;
+    border: none;
+    min-height: 40px;
+    display: flex;
+    font-size: 14px;
+    border-bottom: 1px solid #d6d6d6;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.info_item .item::placeholder {
+    font-family: "Cera Pro", sans-serif;
+    font-size: 15;
+}
+.info_item .label {
+    font-size: 12px;
+    line-height: 143%;
+    color: #888888;
+}
+.info_item_tel .item {
+    padding-left: 40px;
+    background-image: url(/img/flag.svg);
+    background-position: left 0% bottom 50%;
+    background-size: 30px;
+    background-repeat: no-repeat;
+}
+.info_item_add {
+    display: flex;
+}
+.info_item_edit {
+    font-size: 12px;
+    padding: 8px 0;
+    color: #b1b1b1;
+    margin-left: auto;
+    max-width: max-content;
+    margin-top: 10px;
+    display: flex;
+}
+.info_item_add:hover,
+.info_item_add:focus {
+    color: #b5e210;
+}
+.item_info-points {
+    display: flex;
+    flex-direction: column;
+}
+.item_info-points .item_info {
+    border-bottom: 1px solid #d6d6d6;
+    font-size: 14px;
+    display: flex;
+    gap: 5px;
+    padding: 15px 0 5px 0;
+    flex-direction: column;
+}
+.item_info-points .item_info span {
+    color: grey;
+    font-size: 12px;
+}
+.info_item-points {
+    gap: 25px;
+}
+.item_info-title {
+    font-weight: 500;
+    font-size: 19px;
+    margin: 30px 0;
+}
+.item_grid {
+    min-width: 250px;
+    width: 100%;
+    /* max-width: max-content; */
+}
+.items_grid {
+    display: grid;
+    gap: 40px 25px;
+    align-items: flex-end;
+    grid-template-columns: 1fr 1fr;
+}
+.item_info-points .item_info + .item_info {
+    margin-top: 15px;
+}
+.form_address {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.input_address {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    max-width: max-content;
+    min-width: 400px;
+}
+.input_box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input_box label {
+    color: grey;
+    font-size: 14px;
+}
+
+.form_address .butn {
+    border: #69a019;
+    padding: 11px 25px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+.item_info_title {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.company__img {
+    width: 100%;
+    border-radius: 20px;
+}
+.figcaption__company {
+    bottom: 30px;
+    right: 30px;
+}
+.title_advantages {
+    margin: 40px 0;
+    font-size: 25px;
+    text-align: center;
+}
+.advantages .col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 175px;
+    min-width: 120px;
+    padding: 0;
+}
+.advantages {
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+.row,
+.col {
+    margin: 0;
+    padding: 0;
+}
+.row_btn {
+    margin-top: 30px;
+}
+.number {
+    font-size: 30px;
+    letter-spacing: 0.9px;
+    font-weight: 500;
+    line-height: 1;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(35deg, #b5e210, #69a019);
+}
+.breadcrumb__container {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.company__advant-card {
+    padding: 30px 40px;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+    display: flex;
+    gap: 50px;
+    background: white;
+}
+.company__advant {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cards__figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    justify-content: space-between;
+    margin: 70px 0;
+}
+.card__figure {
+    border-radius: 20px;
+    min-height: 350px;
+    overflow: hidden;
+}
+
+.card__figure img {
+    filter: brightness(0.6);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.figcaption__company--sm {
+    bottom: 30px;
+    left: 30px;
+}
+.figcaption__company--sm p {
+    max-width: 180px;
+    color: white;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.company__advant-card p {
+    line-height: 140%;
+}
+.field_company {
+    margin-bottom: 40px;
+}
+.butn_change {
+    display: flex;
+    padding: 10px 15px;
+    background: #ffffff;
+    max-width: max-content;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 1px solid #ededed;
+}
+.form_change_pass {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.form_change_pass .butn {
+    margin-top: 20px;
+}
+.form_change_pass input {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #e8e8e8;
+    max-width: 325px;
+}
+
+
+@media (max-width: 1400px) {
+    .card__figure {
+        min-height: 100%;
+        height: 250px;
+    }
+    .cards__figure {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 1200px) {
+    .field_company {
+        padding: 40px;
+    }
+
+    .field_company .inputs_row {
+        gap: 15px;
+    }
+    .adv_text {
+        font-size: 14px;
+    }
+    .items_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .inputs_row {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .inputs_col {
+        gap: 25px;
+    }
+    .inputs {
+        gap: 25px;
+    }
+    .advantages {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .figcaption__company--sm {
+        bottom: 30px;
+        left: 20px;
+    }
+    .info_item_row {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .field_company {
+        background: none;
+        padding: 0px;
+    }
+    .input input {
+        padding: 18px 16px;
+        border-radius: 10px;
+        border: 1px solid #ededed;
+        border-bottom: none;
+        background-color: white;
+    }
+    .input_tel input {
+        padding-left: 60px;
+        background-position: left 20px bottom 50%;
+    }
+    .row_btn {
+        justify-content: end;
+        margin-top: 20px;
+        flex-direction: column;
+        width: 100%;
+    }
+    .butn-green,
+    .butn-grey {
+        max-width: 100%;
+    }
+    .company__img {
+        object-fit: cover;
+        width: 100%;
+        height: 225px;
+        border-radius: 20px;
+    }
+    .cards__figure {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .butn_change {
+        background: #ffffff;
+    }
+}
+
+@media (max-width: 576px) {
+    .figcaption__company img {
+        max-width: 100px;
+    }
+    .company__advant-card {
+        flex-direction: column;
+    }
+    .company__advant-card {
+        padding: 25px;
+        gap: 25px;
+    }
+    .title_advantages {
+        margin: 40px 0;
+        font-weight: 500;
+        text-align: start;
+    }
+    .number {
+        font-size: 25px;
+    }
+    .advantages .col {
+        max-width: 150px;
+    }
+    .quality .title_page {
+        font-size: 28px;
+    }
+    .cards__figure {
+        margin: 70px 0 35px;
+    }
+}

@@ -6,7 +6,7 @@
         <div class="container">
             <div class="sect__top p0">
                 <div class="breadcrumb__container flex align-items-center">
-                    <img src="./img/line.svg" alt="line" />
+                    <img src="/img/line.svg" alt="line" />
                     <p class="text-grad">О Продукции</p>
                 </div>
                 <div class="quality flex align-items-start">
@@ -50,25 +50,25 @@
         <div class="container">
             <div class="cards__figure">
                 <figure class="card__figure">
-                    <img src="./img/company1.png" alt="company" />
+                    <img src="/img/company1.png" alt="company" />
                     <figcaption class=" figcaption__company--sm">
                         <p>Следим за новыми тенденциями в области дверей</p>
                     </figcaption>
                 </figure>
                 <figure class="card__figure">
-                    <img src="./img/company2.png" alt="company" />
+                    <img src="/img/company2.png" alt="company" />
                     <figcaption class=" figcaption__company--sm">
                         <p>Имеем опытных экспертов в команде, которые могут помочь вам с выбором</p>
                     </figcaption>
                 </figure>
                 <figure class="card__figure">
-                    <img src="./img/company3.png" alt="company" />
+                    <img src="/img/company3.png" alt="company" />
                     <figcaption class=" figcaption__company--sm">
                         <p>Занимаемся доставкой входных дверей высокого качества</p>
                     </figcaption>
                 </figure>
                 <figure class="card__figure">
-                    <img src="./img/company4.png" alt="company" />
+                    <img src="/img/company4.png" alt="company" />
                     <figcaption class=" figcaption__company--sm">
                         <p>Стремимся предоставить нашим клиентам лучшее обслуживание</p>
                     </figcaption>

@@ -5,6 +5,15 @@ use Illuminate\Support\ServiceProvider;
 
 return [
 
+    '1c_server' => env('1C_SERVER', ''),
+    '1c_user_name' => env('1C_USER_NAME', ''),
+    '1c_user_password' => env('1C_USER_PASSWORD', ''),
+
+    'cloudpayments_public_id' => env('CLOUDPAYMENTS_PUBLIC_ID', ''),
+    'cloudpayments_secret' => env('CLOUDPAYMENTS_SECRET', ''),
+
+    'amo_longlive_token' => env('AMO_LONGLIVE_TOKEN', ''),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -170,6 +179,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\TelescopeServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+
+        Intervention\Image\ImageServiceProvider::class,
+
     ])->toArray(),
 
     /*
@@ -185,6 +198,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Image' => Intervention\Image\Facades\Image::class,
     ])->toArray(),
 
 ];

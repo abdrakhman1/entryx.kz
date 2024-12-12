@@ -3,15 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cart;
+use App\Models\Order;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class AdminUserController extends Controller
 {
     public function index()
     {
-        $users = User::paginate(20);
+        $users = User::orderBy('id', 'desc')->paginate(20);
         return view('admin.users.index', compact('users'));
     }
 
@@ -26,6 +30,7 @@ class AdminUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'phone' => 'required',
+            'role_id' => 'required',
         ]);
 
         User::create($request->all());
@@ -60,11 +65,44 @@ class AdminUserController extends Controller
 
     public function destroy(User $user)
     {
-        // if ($user->id != 1){
-        //     $user->delete();
-        // }
+        DB::transaction(function () use ($user) {
+            if ($user->cart != null){
+                foreach($user->cart as $cart){
+                    foreach($cart->items as $cartItem){
+                        $cartItem->delete();
+                    }
+                    $orders = Order::where('cart_id', $cart->id)->get();
+                    foreach($orders as $order){
+                        $order->delete();
+                    }
+                    $cart->delete();
+                }
+            }
+        });
+
+        if ($user->id != 1){
+            $user->delete();
+        }
 
         return redirect()->route('admin.users.index')
                          ->with('success','User deleted successfully.');
+    }
+
+    public function change_pass(User $user)
+    {
+        return view('admin.users.change_pass', compact('user'));
+    }
+
+    public function change_pass_submit(Request $request, User $user)
+    {
+        $request->validate([
+            'newpass' => 'required|min:3',
+            'renewpass' => 'required|same:newpass',
+        ]);
+
+        $user->password = Hash::make($request->newpass);
+        $user->save();
+        return redirect()->route('admin.users.show', $user)
+                         ->with('success','Password changed successfully.');
     }
 }

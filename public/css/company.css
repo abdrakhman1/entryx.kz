@@ -39,7 +39,9 @@
     gap: 45px;
     background: white;
 }
-
+.company__img {
+    border-radius: 20px;
+}
 .figcaption__company {
     bottom: 60px;
     right: 50px;
@@ -79,6 +81,54 @@
 
 .company__advant-card .number {
     font-size: 20px;
+}
+.requisites_list li {
+    font-size: 18px;
+}
+.requisites_list li span {
+    font-weight: 500;
+}
+.requisites_list li:first-child {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.requisites_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.list_in_document {
+    margin-bottom: 10px;
+}
+.list_in_document li {
+    padding-left: 20px;
+    position: relative;
+}
+.text_doc h3{
+    font-size: 25px;
+    margin: 15px 0;
+}
+.text_doc h4{
+    color: #181f20;
+    font-weight: 400;
+}
+.text_doc h3:first-child{
+    margin: 0 0 15px 0;
+}
+.text_doc p + p {
+    margin-top: 10px;
+}
+.list_in_document li::before {
+    left: 0;
+    content: " ";
+    position: absolute;
+    top: 10px;
+    transform: translate(50%, 50%);
+    width: 5px;
+    height: 1px;
+    background-color: #181f20;
 }
 
 @media (max-width: 1400px) {

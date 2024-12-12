@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'phone',
+        'bin',
+        'company_name',
         'role_id',
         'options',
         'expiration_date',
@@ -49,10 +51,17 @@ class User extends Authenticatable
     ];
 
 
-    public function roles()
+    // public function roles()
+    // {
+    //     return $this->hasOne(Role::class, 'id');
+    // }
+     //Изменив hasOne на belongsTo, я указал, что у каждого пользователя есть одна роль, к которой он принадлежит.
+
+    public function role()
     {
-        return $this->hasOne(Role::class, 'id');
+        return $this->belongsTo(Role::class, 'role_id');
     }
+
 
     public function assignRole(Role $role)
     {
@@ -67,12 +76,24 @@ class User extends Authenticatable
     public function hasRole($role)
     {
         if (is_string($role)) {
-            return $this->roles->contains('name', $role);
+            return $this->role->machine_title == $role;
         }
 
         return $role->intersect($this->roles)->count();
     }
-    
+
+    public function branchoffices()
+    {
+        return $this->hasMany(BranchOffice::class, 'user_id');
+    }
+
+    public function addresses()
+    {
+        return $this->hasMany(Address::class, 'user_id');
+    }
+
+
+
     // Пример назначения роли пользователю
     // $user = User::find(1);
     // $role = Role::where('name', 'admin')->first();
@@ -85,4 +106,9 @@ class User extends Authenticatable
     // } else {
     //     // Действия для других ролей или незарегистрированных пользователей
     // }
+
+    public function cart()
+    {
+        return $this->hasMany(Cart::class);
+    }
 }

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->decimal('total_amount', 8, 2);
             $table->string('status')->default(0);
             $table->string('article')->nullable();
+            $table->uuid('uuid')->nullable();
             $table->timestamps();
         });
     }
