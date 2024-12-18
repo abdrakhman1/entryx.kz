@@ -54,7 +54,6 @@ a:focus {
 .general-container {
     display: flex;
     flex-direction: column;
-    gap: 100px;
 }
 .container,
 .container-fluid,

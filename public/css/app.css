@@ -370,8 +370,6 @@ thead.black th {
     border: none;
     color: #181f20;
 }
-.table_intro {
-}
 .admin_table.table_intro tbody tr td:last-child {
     border-radius: 0;
 }
@@ -1286,4 +1284,22 @@ p {
         font-size: 35px;
         margin-bottom: 10px;
     }
+}
+
+.dealers-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sect__top {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dl-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }

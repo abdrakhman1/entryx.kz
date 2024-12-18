@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Entryx | Портал</title>
+        <title>EntryX | Портал</title>
         <link rel="stylesheet" href="{{ asset('libs/bootstrap.min.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/portal/style.css') }}" />
         <script src="{{ asset('libs/jquery/jquery_3.6.0_jquery.min.js') }}"></script>

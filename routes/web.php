@@ -57,6 +57,7 @@ Route::get('/about/public_contract', [SiteController::class, 'about_public_contr
 
 Route::get('/images/{document}/{size_name}', [SiteController::class, 'images_size_name'])->name('site.images_size_name');
 Route::get('/images/flushcashed', [SiteController::class, 'flushcashed'])->name('site.flushcashed');
+Route::get('/projects/{slug}', [ProjectController::class, 'show'])->name('site.projects.show');
 
 Route::get('/cloudpayments_callback', [SiteController::class, 'cloudpayments_callback']);
 Route::get('/hmack_test', [SiteController::class, 'hmack_test']);

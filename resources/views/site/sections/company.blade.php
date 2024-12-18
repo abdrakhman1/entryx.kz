@@ -1,26 +1,26 @@
-@php
+<!-- @php
     $ismain = isset($isindex) ? $isindex : false;
-@endphp
+@endphp -->
 
-@if ($ismain)
+<!-- @if ($ismain) -->
     <section class="company bg-light-grey">
-    @else
+    <!-- @else
         <section class="company no-bg">
-@endif
+@endif -->
 
-@if ($ismain)
-    <div class="container flex flex-column w-100 section-p">
-    @else
+<!-- @if ($ismain) -->
+    <div class=class="container flex flex-column w-100 p-top">
+    <!-- @else -->
         <div class="container flex flex-column w-100 p-top">
-@endif
+<!-- @endif -->
 
 <div class="sect__top">
 
     <div class='breadcrumb__container flex align-items-center'>
-        @if ($ismain)
+        <!-- @if ($ismain) -->
             <img src="/img/line.svg" alt="line" />
             <p class="text-grad">О Компании</p>
-        @else
+        <!-- @else -->
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Назад</a></li>
@@ -30,15 +30,15 @@
                     </li>
                 </ol>
             </nav>
-        @endif
+        <!-- @endif -->
     </div>
 
     <div class="sect__bottom">
-        @if ($ismain)
-            {{-- <h2>
+        <!-- @if ($ismain) -->
+            <!-- {{-- <h2 class="m_w-100">
                     ENTRYX - это компания, основанная группой предпринимателей
                 </h2> --}}
-            <h2>
+            <h2 class="m_w-100">
                 EntryX - качественные двери в наличии. Всегда.
             </h2>
             {{-- <p class="text">
@@ -50,11 +50,11 @@
             <p class="text">
                 Выбирайте из лучших дверей от ведущих заводов с помощью EntryX.
                 <a href="/about"> Посмотрите тут:</a>
-            </p>
-        @else
+            </p> -->
+        <!-- @else -->
             {{-- <h2 class="m_w-100"> ENTRYX - это компания, основанная группой предпринимателей</h2> --}}
             <h2 class="m_w-100"> EntryX - качественные двери в наличии. Всегда.</h2>
-        @endif
+        <!-- @endif -->
 
     </div>
 </div>

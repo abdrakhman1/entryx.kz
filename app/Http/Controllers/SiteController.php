@@ -26,7 +26,21 @@ class SiteController extends Controller
 {
     public function home()
     {
-        return view('site.home');
+        
+                // ID нужных замков
+        $lockIds = [65, 64, 63, 73, 72, 71, 70, 61, 38, 37, 36, 35]; // Замените на реальные ID
+
+        $locks = Product::where('category_id', 2)
+            ->where('visible', 1)
+            ->whereIn('id', $lockIds)
+            ->get()
+            ->map(function($lock) {
+                $lock->image = $lock->get_main_image_path();
+                return $lock;
+            });
+
+
+        return view('site.templates.pages.index', compact('locks'));
     }
 
     public function show_post($slug)
@@ -407,6 +421,27 @@ class SiteController extends Controller
         }
         return rmdir($dir);
 
+    }
+
+
+    public function index()
+    {
+        // Получаем замки (предполагая, что category_id = 2 для замков)
+        $locks = Product::where('category_id', 2)
+                       ->where('visible', 1)  // Только видимые товары
+                       ->take(8)
+                       ->get();
+
+        // Для каждого замка получаем основное изображение
+        $locks = $locks->map(function($lock) {
+            $lock->image = $lock->get_main_image_path(); // Используем ваш существующий метод
+            return $lock;
+        });
+
+        return view('site.templates.pages.index', [
+            'locks' => $locks,
+            // другие переменные, если они есть
+        ]);
     }
 
 

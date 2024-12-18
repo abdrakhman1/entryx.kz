@@ -4,15 +4,6 @@
             <a href="/">
                 <img src="/img/logo-big.svg" alt="logo" />
             </a>
-
-            <div class="stores stores--foot">
-                <a href="#!" class="store">
-                    <img src="/img/app-foot.svg" alt="Appstore" />
-                </a>
-                <a href="#!" class="store">
-                    <img src="/img/googl-foot.svg" alt="Google Play" />
-                </a>
-            </div>
         </div>
         <div class="footer__center">
             <div>
@@ -67,14 +58,14 @@
                 <a class="tel" href="tel:+77073002077">
                     <h3 class="text-grad">+7 (707) 300-20-77</h3>
                 </a>
-                <a class="tel" href="tel:+7 (906) 066-30-55">
+                <!-- <a class="tel" href="tel:+7 (906) 066-30-55">
                     <h3 class="text-grad">+7 (906) 066-30-55</h3>
-                </a>
+                </a> -->
                 <a class="email" href="mailto:entryx.ast@gmail.com">entryx.ast@gmail.com</a>
             </div>
             <div class="address--foot">
-                <p>Адрес:</p>
-                <p>Казахстан, г. Астана, ул. Шарбакты, 14/1</p>
+                <p>Отдел продаж:</p>
+                <p>Казахстан, г. Астана, ул. Туран, 30А</p>
             </div>
             <div class="icon">
                 <a href="https://www.youtube.com/@entryx" class="icon-item">
@@ -114,7 +105,7 @@
 
     </div>
     <div class="copyright container">
-        <p>© {{ date('Y') }} Entryx. Все права защищены.</p>
+        <p>© {{ date('Y') }} EntryX. Все права защищены.</p>
         {{-- <a download href="/docs/Privacy_policy_entryx.docx">Политика конфиденциальности</a> --}}
     </div>
 </footer>

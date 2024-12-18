@@ -49,7 +49,7 @@
                         <div class="d-flex header__contacts">
                             <div class="header__contact">
                                 <a class="tel" href="tel:+77073002077">+7 (707) 300-20-77</a>
-                                <a class="tel" href="tel:+7 (906) 066-30-55">+7 (906) 066-30-55</a>
+                                <!-- <a class="tel" href="tel:+7 (906) 066-30-55">+7 (906) 066-30-55</a> -->
                                 <a class="email" href="mailto:entryx.ast@gmail.com">entryx.ast@gmail.com</a>
                             </div>
                             <div class="icon icon-mobile">

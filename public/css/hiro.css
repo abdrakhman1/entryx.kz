@@ -1,7 +1,7 @@
 section.hiro {
-  background: url(../img/hiro.webp) no-repeat;
+  background: url(../img/hiro.png) no-repeat;
   background-size: cover;
-  height: calc(100vh - 101px);
+  height: calc(100vh - 0px);
   width: 100%;
   margin: 0;
 }
@@ -22,11 +22,17 @@ section.hiro {
   max-width: 900px;
   letter-spacing: 0.03em;
 }
+.brand-color{
+  background: linear-gradient(300deg, #679f1a, #b8e510);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 .hiro p {
   font-size: 18px;
   color: white;
   font-weight: 300;
-  max-width: 575px;
+  max-width: 622px;
   margin-top: 40px;
   line-height: 1.4;
 }
@@ -57,7 +63,7 @@ section.hiro {
   .hiro p {
     font-size: 16px;
     max-width: 485px;
-    line-height: 140%;
+    line-height: 100%;
     margin-bottom: 30px;
   }
   .hiro__right {
