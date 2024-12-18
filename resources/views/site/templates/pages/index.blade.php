@@ -409,7 +409,7 @@
 
                         @foreach($projects as $project)
                             <div class="project__card-wrapper f-carousel__slide">
-                                <a href="/projects/{{ $project['slug'] }}" class="project__item">
+                                <a class="project__item">
                                     <h3 class>{{ $project['name'] }}</h3>
                                     <h3 class="h3-h2">{{ $project['h2'] }}</h3>  
                                     
