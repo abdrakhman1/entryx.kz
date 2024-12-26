@@ -30,11 +30,11 @@
                                     О компании
                                 </a>
                             </li>
-                            <!-- <li class="nav-item {{ route_is_active('site.dealers') }}">
+                            <li class="nav-item {{ route_is_active('site.dealers') }}">
                                 <a class="nav-link" href="{{ route('site.dealers') }}">
                                     Партнерам
                                 </a>
-                            </li> -->
+                            </li>
                             <li class="nav-item {{ route_is_active('site.branch_offices') }}">
                                 <a class="nav-link" href="{{ route('site.branch_offices') }}">
                                     Точки продаж
@@ -65,7 +65,7 @@
                             </div>
                             <button class="butn butn_reg" type="button" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">Стать партнером</button>
-                            <!-- <a href="{{ route('portal.login') }}" class="butn_header butn">Вход для партнеров</a> -->
+                            <a href="{{ route('portal.login') }}" class="butn_header butn">Вход для партнеров</a>
                         </div>
                     </div>
                 </div>

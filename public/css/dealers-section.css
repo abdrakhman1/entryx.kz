@@ -90,3 +90,10 @@ font-size: 18px;
         font-size: 32px
     }
 }
+
+.dl-container {
+    display: flex;
+    gap: 20px;
+}
+
+

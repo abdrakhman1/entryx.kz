@@ -11,13 +11,11 @@ a.butn_admin {
 a:hover {
     color: grey;
 }
-.flex {
-    display: flex;
-}
+
 .gap-sm {
     gap: 10px;
 }
-.flex-col {
+.flex-col { 
     flex-direction: column;
     display: flex;
 }

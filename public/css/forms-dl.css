@@ -1,16 +1,41 @@
+.container-login {
+  display: flex;
+  flex-direction: column;
+  background-color: #181f20;
+  border-radius: 20px;
+  padding: 45px 55px;
+}
+
+.container-login h4 {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+
+.container-login p {
+  color: white;
+  font-size: 15px;
+  line-height: 143%;
+  margin: 0;
+}
+
+.container-login img {
+  max-width: 100%;
+  margin: 10px 0;
+}
+
 .dealers {
   background: url(../img/bg-dl.webp) no-repeat;
   background-size: cover;
 }
 .dl-container {
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
 .dl-container form {
   border-radius: 20px;
   background-color: #181f20;
-  width: min-content;
+
   padding: 45px 55px;
   display: flex;
   flex-direction: column;

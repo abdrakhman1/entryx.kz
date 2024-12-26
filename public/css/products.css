@@ -298,7 +298,6 @@ border-radius: 100%;
 #myCarouselProjects .f-carousel__slide img {
     border-radius: 8px;
     transition: none;
-    width: 90%;
     margin: 0 auto;
 }
 
@@ -511,7 +510,7 @@ border-radius: 100%;
 
 .project__item figure {
     padding: 0 40px;
-    margin: 10px 0; /* Reduced from 25px to 10px */
+    margin: 10px 0 0 0; /* Reduced from 25px to 10px */
     background: none;
     display: flex;
     justify-content: center;
@@ -723,7 +722,7 @@ border-radius: 100%;
     width: 100%;
     height: 300px; /* Фиксированная высота для изображений */
     padding: 20px;
-    margin: 0;
+    margin: 0 0 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -915,6 +914,9 @@ border-radius: 100%;
     .item-info .price {
         font-size: 19px;
     }
+    .h1-vse-zamki {
+        font-size: 37px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -962,5 +964,24 @@ border-radius: 100%;
 .h1-desc {
     font-size: 18px;
     color: #666;
-    width: 50%;
+    width: 70%;
+}
+
+@media (max-width: 576px) {
+    .h1-desc {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .h1-desc {
+        width: 100%;
+    }
+}
+
+@media (max-width: 960px) {
+    .h1-desc {
+        width: 110%;
+    }
+
 }

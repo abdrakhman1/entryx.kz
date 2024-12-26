@@ -15,22 +15,16 @@
         <div class="container w-100 h-100 d-flex align-items-center justify-content-between">
             <div class="w-100">
                 <h1 class="upper"><span class="brand-color">ENTRYX</span> - Соединяя пространства</h1>
-                <p>
-                ООО «EntryX» - это ведущий поставщик
-                качественных входных дверей на рынках
-                Узбекистана и Казахстана,
-                специализирующийся на предложении
-                широкого ассортимента продукции для
-                создания безопасных и стильных
-                интерьеров. <br><br>
-                Компания является официальным
-                представителем крупнейших
-                производителей дверей и предоставляет
-                своим клиентам более 100 моделей дверей,
-                включая решения с умными замками и
-                электронными системами безопасности. В
-                Узбекистане нашими партнерами являются
-                крупнейшие застройщики: BI Group и NRG.
+                <p class="hiro__text">
+                    ТОО «EntryX» является официальным
+                    представителем крупнейших
+                    производителей дверей и предоставляет
+                    своим клиентам  более 100 моделей дверей
+                    в Казахстане и Узбекистане,
+                    включая решения с умными замками и
+                    электронными системами безопасности. В
+                    Узбекистане нашими партнерами являются
+                    крупнейшие застройщики: BI Group и NRG.
                 </p>
                 <a href="/catalog" class="butn butn__hiro upper">В каталог</a>
             </div>
@@ -121,8 +115,9 @@
                 <img src="/img/line.svg" alt="line" />
                 <p class="text-grad">Категории умных электронных замков</p>
             </div>
+            
             <div class="sect__bottom">
-                <h2>Электронные биометрические замки</h2>
+            <h2 class="h1-vse-zamki">Электронные биометрические замки</h2>
                 <a href="/catalog/2" class="butn upper no-show-mobile">Все замки</a>
             </div>
             <p class="h1-desc">Наши электронные замки - это инновационные устройства, которые обеспечивают удобство использования и контроль доступа в реальном времени.</p>
@@ -148,30 +143,6 @@
         <a href="/catalog/2" class="butn fansy_btn show-mobile">Все замки</a>
     </div>
 </section>
-
-    <!-- <div class="locks-description">
-                <p>Электронные биометрические замки пришли на
-                замену традиционным врезным, навесным и кодовым
-                замкам.</p>
-                <p>Они представляют собой подобные устройства замки,
-                в которых вместо ключа для открытия используется
-                метод идентификации по отпечаткам пальцев.</p> 
-                <p>Сегодня такие замки смело можно назвать наиболее
-                практичными, надежными и обеспечивающими
-                высокий уровень защиты.</p> 
-                <p>Наши электронные замки - это не только надежное
-                средство защиты вашего дома, офиса или
-                коммерческого объекта, но и инновационные
-                устройства, которые обеспечивают удобство
-                использования и контроль доступа в реальном
-                времени. Мы предлагаем широкий выбор моделей
-                электронных замков, от простых автономных
-                устройств до современных смарт-замков с
-                возможностью управления через мобильное
-                приложение.</p>
-                </div> -->
-
-
     <section class="projects">
         <div class="container">
             <div class="sect__top">
@@ -242,7 +213,7 @@
                                 [
                                     'slug' => 'greenline-aqua',
                                     'name' => 'ЖК «GREENLINE AQUA»',
-                                    'h2' => '',
+                                    'h2' => 'BI GROUP, АСТАНА',
                                     'image' => '/img/greenlineaqua.webp',
                                     'description' => 'Жилой Квартал GreenLine.Aqua находится в самом центре 
                                     города, расположенный на пересечении улиц EK-32 и EK-15/2, является частью 
@@ -432,23 +403,54 @@
     </section>
     
     <section>
+
+        @include('site.sections.company', ['isindex' => true])
+
+    </section>
+    <section>
+        <div class="container">
+            <div class="sect__top">
+                <div class="breadcrumb__container flex align-items-center">
+                    <img src="/img/line.svg" alt="line" />
+                    <p class="text-grad">Партнерам</p>
+                </div>
+                <div class="sect__bottom">
+                    <h2>Портал для партнеров</h2>
+                    <p class="text">
+                        Информация по использованию портала и личного кабинета для
+                        партнеров
+                    </p>
+                </div>
+            </div>
+
+            @include('site.sections.for_dealers', ['isindex' => true ])
+
+        </div>
+    </section>
+    <section>
         <section class="dealers section-p">
-            <div class="container">
-                <div class="dealers-content">
-                    <div class="sect__top">
-                        <div class="breadcrumb__container flex align-items-center">
-                            <img src="/img/line.svg" alt="line" />
-                            <p class="text-grad">Форма заявки</p>
-                        </div>
-                        <div class="sect">
-                            <h2 class="white">Хотите стать партнером?</h2><br>
-                            <p class="white">
-                                Оформите заявку и наши менеджеры Вам перезвонят!
-                            </p>
-                        </div>
+            <div class="container flex items-center">
+                <div class="sect__top">
+                    <div class="breadcrumb__container flex align-items-center">
+                        <img src="/img/line.svg" alt="line" />
+                        <p class="text-grad">Форма заявки</p>
                     </div>
-                    <div class="dl-container">
-                        @include('site.partials.feedback_form')
+                    <div class="sect">
+                        <h2 class="white">Хотите стать партнером?</h2><br>
+                        <p class="white">
+                            Оформите заявку и наши менеджеры Вам перезвонят!
+                        </p>
+                    </div>
+                </div>
+                <div class="dl-container">
+
+                    @include('site.partials.feedback_form')
+
+                    <div class="container-login">
+                        <h4>У вас уже есть аккаунт?</h4>
+                        <a href="/user/login" class="butn-white">Войти</a>
+                        <img src="/img/decor.svg" alt="" />
+                        <p>ДОСТУП ПО ПАРОЛЮ ДЛЯ ОРГАНИЗАЦИЙ, ИП и ЮР.ЛИЦ</p>
                     </div>
                 </div>
             </div>

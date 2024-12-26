@@ -20,9 +20,7 @@
 .no-display {
     display: none;
 }
-.flex {
-    display: flex;
-}
+
 .flex-col {
     display: flex;
     flex-direction: column;

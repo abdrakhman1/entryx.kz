@@ -1,13 +1,21 @@
+.hiro__text {
+  filter: brightness(1.1);
+}
+
 section.hiro {
-  background: url(../img/hiro.png) no-repeat;
+  background: url(../img/hiro.webp) no-repeat;
   background-size: cover;
-  height: calc(100vh - 0px);
+  height: 100vh;
+  min-height: 600px;
+  max-height: 1000px;
   width: 100%;
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 .butn.butn__hiro {
   padding: 18px 44px;
-  margin-top: 65px;
+  margin-top: 45px;
   display: block;
   max-width: 175px;
 }
@@ -15,9 +23,9 @@ section.hiro {
   color: white;
 }
 .hiro h1 {
-  font-size: 70px;
+  font-size: 54px;
   color: white;
-  line-height: 102%;
+  line-height: 1.2;
   font-weight: 500;
   max-width: 900px;
   letter-spacing: 0.03em;
@@ -33,8 +41,8 @@ section.hiro {
   color: white;
   font-weight: 300;
   max-width: 622px;
-  margin-top: 40px;
-  line-height: 1.4;
+  margin-top: 30px;
+  line-height: 1.5;
 }
 
 .hiro__social {
@@ -43,39 +51,100 @@ section.hiro {
 }
 
 @media (max-width: 1400px) {
-}
-@media (max-width: 992px) {
   .hiro h1 {
     font-size: 60px;
+    max-width: 800px;
+  }
+
+  .hiro p {
+    font-size: 23px;
+  }
+}
+@media (max-width: 992px) {
+  section.hiro {
+    min-height: 500px;
+  }
+  
+  .hiro h1 {
+    font-size: 55px;
     max-width: 600px;
   }
+  
+  .hiro p {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 25px;
+  }
+  
+  .butn.butn__hiro {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.hiro {
+    min-height: 450px;
+  }
+  
+  .hiro h1 {
+    font-size: 52px;
+    max-width: 500px;
+  }
   .hiro p{
-    line-height: 140%;
+    font-size: 24px;
   }
 }
 
 @media (max-width: 576px) {
+  section.hiro {
+    min-height: 400px;
+  }
+  
   .hiro h1 {
-    font-size: 36px;
-    /* max-width: 350px; */
+    font-size: 49px;
+    max-width: 100%;
   }
 
   .hiro p {
-    font-size: 16px;
-    max-width: 485px;
-    line-height: 100%;
-    margin-bottom: 30px;
+    font-size: 22px;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 25px;
   }
+  
   .hiro__right {
     display: none;
   }
+  
   .butn {
     width: 100%;
   }
+  
   .hiro__social {
     display: none;
+  }
+  
+  .butn.butn__hiro {
+    max-width: 100%;
+    margin-top: 25px;
+  }
 }
-.butn.butn__hiro {
-  max-width: 100%;
-}
+
+@media (max-height: 700px) {
+  section.hiro {
+    min-height: 450px;
+  }
+  
+  .hiro h1 {
+    font-size: 36px;
+  }
+  
+  .hiro p {
+    margin-top: 15px;
+  }
+  
+  .butn.butn__hiro {
+    margin-top: 20px;
+    padding: 15px 35px;
+  }
 }

@@ -3,7 +3,7 @@
 @endphp -->
 
 <!-- @if ($ismain) -->
-    <section class="company bg-light-grey">
+    <section class="company">
     <!-- @else
         <section class="company no-bg">
 @endif -->

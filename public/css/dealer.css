@@ -12,11 +12,10 @@ h3 {
 .lk__container {
     border-radius: 20px;
     display: flex;
-    gap: 20px;
-    min-height: 550px;
     background: #f7f7f7;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 70px;
 }
 .lk__img {
     min-width: 270px;
@@ -77,6 +76,7 @@ h3 {
     background-repeat: no-repeat;
     background-position: bottom -265% left 50%;
     min-height: 550px;
+    margin-bottom: 70px;
 }
 .mobile-app h3 {
     color: #ffffff;
@@ -106,16 +106,22 @@ h3 {
     flex-direction: column;
     justify-content: space-between;
     min-width: 250px;
+    flex: 1;
+}
+.container-login h4 {
+    margin-bottom: 20px;
 }
 .container-login img {
-    margin-top: 30px;
+    margin: auto 0;
+
 }
 .container-login p {
-    max-width: 230px;
+    max-width: none;
     font-size: 15px;
     color: white;
     text-transform: uppercase;
     line-height: 141%;
+    margin-top: auto;
 }
 .lk__box.container.p0 {
     padding-left: 0;
@@ -171,4 +177,13 @@ h3 {
     .mobile-app {
       background-position: bottom -265% left 50%;
       padding: 40px 35px;}
+}
+
+.dl-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+.dl-container form {
+    flex: 2;
 }
