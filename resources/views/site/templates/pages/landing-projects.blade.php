@@ -24,7 +24,6 @@
                     </div>
                 </div>
                 <img src="https://static.tildacdn.pro/tild3463-6137-4465-a437-373761356362/1.jpeg" alt="Проект 1" class="project-image">
-                <img src="/img/5_page-0001.jpg" alt="Проект 1" class="project-image">
             </div>
 
             <!-- 2 (фото слева) -->
