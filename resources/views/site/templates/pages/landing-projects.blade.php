@@ -25,8 +25,6 @@
                 </div>
                 <img src="https://static.tildacdn.pro/tild3463-6137-4465-a437-373761356362/1.jpeg" alt="Проект 1" class="project-image">
                 <img src="/img/5_page-0001.jpg" alt="Проект 1" class="project-image">
-                <img src="/images/27228.jpg" alt="Проект 2" class="project-image">
-                <img src="/images/27232.jpg" alt="Проект 2" class="project-image">
             </div>
 
             <!-- 2 (фото слева) -->
@@ -45,7 +43,6 @@
                     </div>
                 </div>
                 <img src="https://static.tildacdn.pro/tild3936-3135-4338-b239-336338386131/noroot.jpg" alt="Проект 2" class="project-image">
-                <img src="/img/turan-palace-2.jpg" alt="Проект 2" class="project-image">
             </div>
 
             <!-- 3 (фото справа) -->
@@ -60,7 +57,6 @@
                     </div>
                 </div>
                 <img src="https://static.tildacdn.pro/tild3132-3237-4139-a539-646136393134/resbublika.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         <div class="project-block">
                 <div class="project-info">
@@ -75,7 +71,6 @@
                     </div>
                 </div>
                 <img src="https://static.tildacdn.pro/tild6332-3439-4239-b734-316137323639/grand_viktoria.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         <div class="project-block">
                 <div class="project-info">
@@ -88,7 +83,6 @@
                     </div>
                 </div>
                 <img src="/img/greenlineflora.webp" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
         </div>
         <div class="project-block">
                 <div class="project-info">
@@ -101,7 +95,6 @@
                     </div>
                 </div>
                 <img src="/img/greenlineaqua.webp" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         <div class="project-block">
                 <div class="project-info">
@@ -118,7 +111,6 @@
                     </div>
                 </div>
                 <img src="/img/sardar-city.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         </div>
         <div class="project-block">
@@ -137,7 +129,6 @@
                     </div>
             </div>
                 <img src="/img/kompas-sever.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         <div class="project-block">
         <div class="project-info">
@@ -155,7 +146,6 @@
                     </div>
                 </div>
                 <img src="/img/auen.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         <div class="project-block">
         <div class="project-info">
@@ -172,7 +162,6 @@
                     </div>
                 </div>
                 <img src="/img/atamura.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         </div>
         <div class="project-block">
@@ -190,7 +179,6 @@
                     </div>
                 </div>
                 <img src="/img/onay.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         </div>
         <div class="project-block">
@@ -208,7 +196,6 @@
                     </div>
                 </div>
                 <img src="/img/aksu.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         </div>
         <div class="project-block">
@@ -226,7 +213,6 @@
                     </div>
                 </div>
                 <img src="/img/baitas.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         </div>
         <div class="project-block">
@@ -241,7 +227,6 @@
                     </div>
                 </div>
                 <img src="/img/tengri.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         </div>
         <div class="project-block">
@@ -259,7 +244,6 @@
                     </div>
                 </div>
                 <img src="/img/eva.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         </div>
         <div class="project-block">
@@ -278,7 +262,6 @@
                     </div>
                 </div>
                 <img src="/img/delta.jpg" alt="Проект 3" class="project-image">
-                <img src="/img/renesans-3.jpg" alt="Проект 1" class="project-image">
             </div>
         </div>
     </section>
